@@ -1,0 +1,28 @@
+# Setup
+title:               Nowgeun's Blog
+tagline:             ''
+description:         'A blog of Jaekeun Lee for recording life and keeping track of studies, interests and experiences'
+url:                
+baseurl:             ''
+paginate:            5
+future: true
+plugins:
+  - jekyll-sitemap
+
+# Page
+pages_list: 
+  About Me: '/about'
+  Archive: '/archive'
+  Contact: '/contact'
+  Tags: '/tags'
+
+
+
+# About/contact
+author:
+  name:              Jaekeun Lee
+  url:               #
+  email:             agdal1125@gmail.com
+
+# Custom vars
+version:             1.0.0

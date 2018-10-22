@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Nowgeun's Blog</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2018-10-22T22:14:42+09:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Jaekeun Lee</name>
+   <email>agdal1125@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Naive Bayes Classifier</title>
+   <link href="http://localhost:4000/2018/10/11/NaiveBayes.html"/>
+   <updated>2018-10-11T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2018/10/11/NaiveBayes</id>
+   <content type="html">&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;naive-bayes-classifier&quot;&gt;Naive Bayes Classifier&lt;/h2&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Naive Bayes is one of the machine learning techniques used for classification and prediction. Obviously, it involves &lt;a href=&quot;/2018/10/10/Bayes-Theorem.html&quot;&gt;Bayesian Theorem&lt;/a&gt;. The classifier assumes that all &lt;strong&gt;explanatory variables are independent to each other&lt;/strong&gt; respectively contributing to the response variable.&lt;/p&gt;
+
+&lt;h4 id=&quot;advantage&quot;&gt;Advantage&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Naive Bayes classifier can be trained effectively on Supervised Learning Environment, because it does not require a lot of data for training.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Despite its simplicity and design, it has been proven to work well in various complex situations&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;h3 id=&quot;model&quot;&gt;Model&lt;/h3&gt;
+
+&lt;p&gt;Naives Bayes Model is conditional probabilistic model. The &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; features (independent explanatory variables) are represented as vector &lt;script type=&quot;math/tex&quot;&gt;\mathbf x = (x_1,x_2,x_3,x_4,....x_n)&lt;/script&gt;,  which is the data given for instance classification.&lt;/p&gt;
+
+&lt;p&gt;The instance probabilities are &lt;script type=&quot;math/tex&quot;&gt;p(C_k \vert x_1,...,x_n)&lt;/script&gt;. In other words, the probability is calculated for all &lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; (or &lt;script type=&quot;math/tex&quot;&gt;C_k&lt;/script&gt;) possible outcomes.&lt;/p&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;Instance Probability Model&lt;/div&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p(C_k \vert \mathbf x) \biggl(= p(C_k \vert x_1,...,x_n)\biggr) = {p(C_k)*p(\mathbf x \vert C_k) \over p(\mathbf x)}&lt;/script&gt;
+
+&lt;p&gt; 
+ 
+ &lt;/p&gt;
+
+&lt;p&gt;The denominator $p(\mathbf x)$ is always the same, so when comparing probability between instances and find the best classification, the numerator part is the one that only matters.&lt;/p&gt;
+
+&lt;p&gt;Using the characteristics of conditional probability and if the explanatory variables are independent, the numerator part above can be altered like this:&lt;/p&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;.&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;.&lt;/div&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;.&lt;/div&gt;
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;Altered Numerator&lt;/div&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+p(C_k)*p(\mathbf x \vert C_k) \\
+&amp; = p(C_k)*p(x_1,...,x_n \vert C_k)\\
+
+&amp; = p(x_1,...,x_n,C_k)\\
+
+&amp; = p(x_1 \vert x_2,..,x_n,C_k)*p(x_2,...,x_n,C_k)\\
+  
+&amp; = p(x_1 \vert x_2,..,x_n)*p(x_2 \vert x_3,...,
+  x_n)*p(x_3,...,x_n,C_k)\\
+  
+&amp; = ...\\
+  
+&amp; = p(x_1 \vert x_2,..,x_n,C_k)*p(x_2 \vert x_3,...,x_n,C_k)*p(x_3 \vert x_4,...,x_n,C_k)...*p(x_{n} \vert C_k)*p(C_k)\\
+  
+&amp; = p(x_1 \vert C_k)*p(x_2 \vert C_k)*p(x_3 \vert C_k)...*p(x_{n-1} \vert C_k)*p(x_n \vert C_k)\\
+  \end{align} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Thus, the final model can be written as:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p(C_k \vert \mathbf x) \varpropto p(C_k)*\prod_{i=1}^{n} p(x_i \vert C_k)&lt;/script&gt;
+
+&lt;p&gt;In short, the Naive Bayes Classifier is product of all conditional probablities of explanatory variables to the given category and the probability of category itself.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Bayes' Probability</title>
+   <link href="http://localhost:4000/2018/10/10/Bayes-Theorem.html"/>
+   <updated>2018-10-10T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2018/10/10/Bayes-Theorem</id>
+   <content type="html">&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;bayes-theory&quot;&gt;Bayes’ Theory&lt;/h2&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;In probabilistic study, there are two main stream approaches:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Frequentist Approach( &lt;em&gt;the classic probability&lt;/em&gt; )
+    &lt;ul&gt;
+      &lt;li&gt;Define probability as an event’s relative frequency in a large number of trials when performed infinite times&lt;/li&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;P(x) = \lim_{n_t -&gt; \infty} \frac{n_x}{n_t}&lt;/script&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;n_t&lt;/script&gt; is total number of trials and &lt;script type=&quot;math/tex&quot;&gt;n_x&lt;/script&gt; is number of that event &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; occurred and &lt;script type=&quot;math/tex&quot;&gt;P(x)&lt;/script&gt; is the probability&lt;/li&gt;
+      &lt;li&gt;However, application of frequentist approach is nearly impossible in the real word, because you cannot simply try everything infinite amount of times. It is difficult to apply real world problems…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Bayesian Approach
+    &lt;ul&gt;
+      &lt;li&gt;Define probability as a &lt;strong&gt;“degree of belief”&lt;/strong&gt;. It is subjective, but not random&lt;/li&gt;
+      &lt;li&gt;Experience and data are used to &lt;strong&gt;update&lt;/strong&gt; the probability&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Practical to apply in real world problems!!&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Bayesian Theorem: 
+ &lt;script type=&quot;math/tex&quot;&gt;P(H|E) = {P(H \bigcap E) \over P(E)} = \frac{P(E|H)*P(H)}{P(E)} =  \frac{P(E|H)*P(H)}{P(H)*P(E|H) + P(H^c)*P(E|H^c)}&lt;/script&gt;&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;P(H)&lt;/script&gt; is called the prior probability, the probability that you know before the “update”&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;P(H \vert E)&lt;/script&gt; is called the posterior probability, the updated probability with new information&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;The Bayesian Theorem uses conditional probability to update prior probability to posterior probability&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; 
+ 
+ 
+ &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;conditional-probability&quot;&gt;Conditional Probability&lt;/h4&gt;
+
+  &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;P(A \vert B) = {P(A \cap B) \over P(B)}&lt;/script&gt;&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Given that event B occurred, the chance that &lt;script type=&quot;math/tex&quot;&gt;P(A)&lt;/script&gt; also occurred. (probability of A given B)&lt;/li&gt;
+    &lt;li&gt;if the two events A and B are completely independent,  &lt;script type=&quot;math/tex&quot;&gt;P(A \vert B) = P(A)&lt;/script&gt;&lt;/li&gt;
+    &lt;li&gt;This implies that information of B is irrelevant or useless when you want to know A&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+
+&lt;p&gt;Let’s say that a mother is in her 40s. She got a positive reaction from X-ray examination of breast cancer. What is her probability of really having a breast cancer?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Probability that women in her 40s will have a breast cancer is 1%&lt;/li&gt;
+  &lt;li&gt;Probability that cancer patient of women in 40s will be diagnosed positive from X-ray examination is 90%&lt;/li&gt;
+  &lt;li&gt;Probability that healthy women in 40s will be diagnosed positive from X-ray examination is 5%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;solution&quot;&gt;Solution&lt;/h4&gt;
+  &lt;p&gt;The probability that we want to know is &lt;script type=&quot;math/tex&quot;&gt;P( c \vert p)&lt;/script&gt;&lt;/p&gt;
+
+  &lt;p&gt;Given informations are:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;P(c)&lt;/script&gt; = 0.01&lt;/li&gt;
+    &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;P(p \vert c)&lt;/script&gt; = 0.9&lt;/li&gt;
+    &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;P (p \vert c^c)&lt;/script&gt; = 0.05&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;Using the Bayes theorem:
+&lt;script type=&quot;math/tex&quot;&gt;P(c \vert p) = {P(c)*P(p \vert c) \over P(p)}&lt;/script&gt;&lt;/p&gt;
+
+  &lt;p&gt;So all we need to know is the value of &lt;script type=&quot;math/tex&quot;&gt;P(p)&lt;/script&gt; which is:&lt;/p&gt;
+  &lt;h5 id=&quot;pp--ppcpc--ppccpcc--09001--005099--00585&quot;&gt;&lt;script type=&quot;math/tex&quot;&gt;P(p) = P(p|c)*P(c) + P(p|c^c)*P(c^c) = 0.9*0.01 + 0.05*0.99 = 0.0585&lt;/script&gt;&lt;/h5&gt;
+
+  &lt;p&gt;The final calculation of what we want to know would be: 
+0.01 * 0.9 / 0.0585 = 0.15384…&lt;/p&gt;
+
+  &lt;p&gt;Thus, the probability that a mother will have breast cancer, given that her X-ray examination was positive is about 15%&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Topic Modeling and Latent Dirichlet Allocation</title>
+   <link href="http://localhost:4000/2018/10/08/LDA-topic-modeling.html"/>
+   <updated>2018-10-08T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2018/10/08/LDA-topic-modeling</id>
+   <content type="html">&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;topic-modeling&quot;&gt;Topic Modeling&lt;/h2&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;The objective of topic modeling is very self explanatory; discovering abstract &lt;strong&gt;“topics”&lt;/strong&gt; that can most describe semantic meaning of documents. It is an integrated field of machine learning and natural language processing, and a frequently used text-mining tool to discover hidden semantic structures in the texts. Topic modeling can help facilitating organization of vast amount of documents and find insights from unstructured text data.&lt;/p&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;h2 id=&quot;lda-latent-dirichlet-allocation&quot;&gt;LDA (Latent Dirichlet Allocation)&lt;/h2&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;LDA is one of the graphical models used for topic modeling. LDA is a generative statistical model that posits specific probability of word appearance in accordance to a specific topic. The image below best explains how LDA works.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/lda_diagram.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;The key part of LDA lies in the right part of the diagram, “Topic proportions and Assignments”. LDA views documents as a mixture of various topics and each topic consists of a distribution of words.  LDA has several assumptions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;number of &lt;em&gt;N&lt;/em&gt; words are decided by &lt;strong&gt;&lt;em&gt;Poisson distribution&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;from number &lt;em&gt;K&lt;/em&gt; topic sets, document topics are decided by &lt;strong&gt;&lt;em&gt;Dirichlet distribution&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;each word &lt;script type=&quot;math/tex&quot;&gt;w_{i}&lt;/script&gt; in the document is generated by following rules:
+    &lt;ol&gt;
+      &lt;li&gt;pick a topic in accordance to the multinomial distribution sampled above&lt;/li&gt;
+      &lt;li&gt;generate the word using the topic in accordance to the multinomial distribution of the words in that topic&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h4 id=&quot;model&quot;&gt;Model&lt;/h4&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/assets/images/Smoothed_LDA.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; is the parameter of the Dirichlet prior on the per-document topic distributions,&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; is the parameter of the Dirichlet prior on the per-topic word distribution,&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\theta_{m}&lt;/script&gt; is the topic distribution for document &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\varphi_{k}&lt;/script&gt; is the word distribution for topic &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;z_{mn}&lt;/script&gt; is the topic for the &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-th word in document &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt;, and&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;w_{mn}&lt;/script&gt; is the specific word.&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>TF-IDF</title>
+   <link href="http://localhost:4000/2018/10/07/TF-IDF.html"/>
+   <updated>2018-10-07T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2018/10/07/TF-IDF </id>
+   <content type="html">&lt;h2 id=&quot;tf-and-idf&quot;&gt;TF and IDF&lt;/h2&gt;
+
+&lt;p&gt;Text Frequency (TF)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;TF is an index that shows frequency of words in each document in the corpus. It is simply calculated by the ratio of word counts by the total number of words in that document. &lt;strong&gt;Each word has its own TF value&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Inverse Document Freqeucny (IDF)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;IDF is an index that shows the relative weight of words across all documents in the corpus. In other words, it is a representation of rarity of a word in the set of documents. &lt;strong&gt;Each word has its own IDF value&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;h2 id=&quot;tf-idf&quot;&gt;TF-IDF&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;TF-IDF is a multiplication of TF and IDF values. It is a numerical statistics that aims to reflect significance of word in a particular document (&lt;em&gt;TF&lt;/em&gt;), also considering other documents in the group (&lt;em&gt;IDF&lt;/em&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;h2 id=&quot;preprocessing&quot;&gt;Preprocessing&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Before you calculate the TF-IDF of all words, each documents need to be processed. They need to be &lt;strong&gt;tokenized&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tokenizing&lt;/strong&gt; is process of classifying sections of string and parsing them.&lt;/li&gt;
+  &lt;li&gt;For example, the text “He is a good boy” can be tokenized into: [“He”,”is”,”a”,”good”,”boy”]&lt;/li&gt;
+  &lt;li&gt;The processing methods can vary depending on stemming or lemmatization methods&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;example-code&quot;&gt;Example code&lt;/h5&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# dependencies
+import os
+import nltk
+
+work_dir = &quot;/Users/nowgeun/Desktop/Research/Documents/&quot;
+text_files = os.listdir(work_dir)
+
+
+def pre_processing(text):
+    # lowercase
+    text=text.lower()
+    
+    # remove tags
+    text=re.sub(&quot;&amp;amp;lt;/?.*?&amp;amp;gt;&quot;,&quot; &amp;amp;lt;&amp;amp;gt; &quot;,text)
+    
+    # remove special characters and digits
+    text=re.sub(&quot;(\\d|\\W)+&quot;,&quot; &quot;,text)
+    
+    return text
+    
+
+def tokenize(text):
+   tokens = nltk.word_tokenize(text)
+    stems = []
+    
+    #pos(part of speech) tagging: grammatical tagging of word by their category (verb,noun,etc)
+    for item in nltk.pos_tag(tokens):
+        # Filtering tokens with only Nouns (N)
+        if item[1].startswith(&quot;N&quot;):
+            if len(nltk.wordnet.WordNetLemmatizer().lemmatize(item[0])) == 1:
+                pass
+            else:
+                stems.append(nltk.wordnet.WordNetLemmatizer().lemmatize(item[0]))
+
+    return stems
+
+# creating corpus from text files using preprocessing function 
+
+token_dict = {}
+
+for txt in text_files:
+    if txt.endswith(&quot;.txt&quot;):
+        with open (work_dir+ txt) as f:
+        
+            data = &quot;&quot;.join(f.readlines()).replace(&quot;\n&quot;,&quot; &quot;)
+            data = pre_processing(data)
+
+            token_dict[txt] = data &amp;amp;nbsp; &amp;amp;nbsp;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;tf-idf-computation-using-scikit-learn-package&quot;&gt;TF-IDF computation using Scikit-Learn package&lt;/h3&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h5 id=&quot;example-code-1&quot;&gt;Example code&lt;/h5&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;With Scikit-Learn package, you can compute the tf-idf value and retrieve the results as a matrix form.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Each row of matrix represents respective documents&lt;/li&gt;
+  &lt;li&gt;Each column of matrix represents words that appear on all documents&lt;/li&gt;
+  &lt;li&gt;The matrix is sparse-matrix (where most values are 0). This is because not all words appear on all documents or the frequency of the word itself is very low&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from sklearn.feature_extraction.text import TfidfVectorizer
+
+vectorizer = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
+
+# matrix of all documents in rows and idf values of respective words in column
+matrix = vectorizer.fit_transform(token_dict.values())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Web Crawling with BeautifulSoup</title>
+   <link href="http://localhost:4000/2018/10/06/Web-crawling-with-bs4.html"/>
+   <updated>2018-10-06T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2018/10/06/Web crawling with bs4</id>
+   <content type="html">&lt;h2 id=&quot;webcrawling&quot;&gt;Webcrawling&lt;/h2&gt;
+
+&lt;p&gt;Web crawling allows users to gather data directly from the internet. Web crawling is an act of software that explores world wide web (www) is an autonomous way to gather data. Portal’s search engines are based on these web crawlers that visits a myriad of web pages and collect data.&lt;/p&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;h3 id=&quot;how-it-works&quot;&gt;How it works&lt;/h3&gt;
+
+&lt;p&gt;The internet is a collection of web pages formed by HTML (Hyper Text Markup Language). We navigate these HTML pages through browser (&lt;em&gt;Chrome, Firefox, Safari, Internet Explorer, etc..)&lt;/em&gt; which facilitates exploration of web through Graphic User Interfaces (GUI) and various plugins. Web crawling is done by parsing the HTML, filtering necessary parts and saving them into files.&lt;/p&gt;
+
+&lt;h3 id=&quot;cautions&quot;&gt;Cautions&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There may be legal penalties depending on the website that you wish to crawl&lt;/li&gt;
+  &lt;li&gt;Some websites has policies against web crawling (&lt;em&gt;e.g. robots.txt&lt;/em&gt; contains information about data collection policy)&lt;/li&gt;
+  &lt;li&gt;Web crawling may cause traffic overload and this is pertinent to security issues&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;h2 id=&quot;basic-web-crawling-with-python3&quot;&gt;Basic Web Crawling with Python3&lt;/h2&gt;
+
+&lt;p&gt;Required libaries: bs4, requests,&lt;/p&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;h3 id=&quot;simple-web-crawling&quot;&gt;Simple Web Crawling&lt;/h3&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Simple web crawling can be achieved by using bs4 and requests libraries. The tricky part is in understanding structure of html and finding tags where the desired information  belongs.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import requests
+from bs4 import BeautifulSoup
+
+# Connect to website via requests module
+url = requests.get(&quot;your url that you wish to access&quot;)
+
+# Retrieve html
+html = url.text
+
+# Parse the html data with BeautifulSoup
+soup = BeautifulSoup(html, 'html.parser')
+
+# You can see the HTML Raw Source code from the website that you have accessed
+print(soup)
+
+
+# Retrieving specific information, using html tags
+
+### This retrieves the first html tag that has &quot;div&quot; tag and its class name &quot;itemname&quot;
+print(soup.find(&quot;div&quot;,{&quot;class&quot;:&quot;itemname&quot;))
+
+### find_all function retrieves all tags that has &quot;a&quot; tag in the raw source codes
+### shown as a list form
+print(soup.find_all(&quot;a&quot;))
+
+### get_text() function retrieves only text information from the specified tags
+soup.find(&quot;div&quot;,{&quot;id&quot;:&quot;item_number&quot;).get_text()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Student's T-test</title>
+   <link href="http://localhost:4000/2018/10/04/T-Tests.html"/>
+   <updated>2018-10-04T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2018/10/04/T-Tests</id>
+   <content type="html">&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;students-t-test&quot;&gt;Student’s T-Test&lt;/h2&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Student’s &lt;strong&gt;&lt;em&gt;t-test&lt;/em&gt;&lt;/strong&gt; is one of statistical hypothesis tests which is performed when the test statistics is assumed to follow a Student’s t-distribution under the null hypothesis.&lt;/li&gt;
+  &lt;li&gt;It is usually used to compare means of two samples to see if they are equal or not.&lt;/li&gt;
+  &lt;li&gt;There are different types of t-test, so we should be aware of which t-test to choose.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;p align=&quot;left&quot;&gt;
+&lt;img src=&quot;/assets/images/choose_sig_test.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The diagram above briefly shows which significance test to choose from, when you perform statistical hypothesis tests. You can see several types of t-tests, but in this post I will only cover the most fundamental t-tests that are used for comparing two sampes: paired(dependent) t-test, unpaired(independent) t-test&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;unpaired-t-test&quot;&gt;Unpaired t-test&lt;/h3&gt;
+&lt;p&gt; 
+ 
+Unpaired t-test assumes that two sample groups are independent and from an approximately normal distribution. The formula differs depending on the equivalence or variance.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h4 id=&quot;equal-variance&quot;&gt;Equal variance&lt;/h4&gt;
+&lt;p&gt; 
+parameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\bar{x_1}, \bar{x_2}&lt;/script&gt; is mean value of group 1 and group 2&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;n_1, n_2&lt;/script&gt; are numbers of samples of group 1 and group 2&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;t-test statistics value: &lt;script type=&quot;math/tex&quot;&gt;t = \frac{\bar{x_{1}}+\bar{x_{2}}}{\sqrt {s^2\biggl(\frac{1}{n_{1}}+\frac{1}{n_{2}}\biggr)}}&lt;/script&gt;
+&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;pooled sample variance: &lt;script type=&quot;math/tex&quot;&gt;s^2 = {\sum_{i=1}^{n_1} (x_i - \bar{x_1})^2 + \sum_{j=1}^{n_2} (x_j - \bar{x_2})^2\over n_1 + n_2 - 2}&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;degree of freedom: &lt;script type=&quot;math/tex&quot;&gt;df = n-1&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;r-code&quot;&gt;R Code&lt;/h4&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t.test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alternative&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;two.sided&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var.equal&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# or&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t.test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var.equal&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;h4 id=&quot;non-equal-variance&quot;&gt;Non-equal variance&lt;/h4&gt;
+&lt;p&gt; 
+parameters:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;t-test statistics value: &lt;script type=&quot;math/tex&quot;&gt;d = \frac{\bar{x_1}+\bar{x_2}}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}&lt;/script&gt;
+&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;group 1 sample variance: &lt;script type=&quot;math/tex&quot;&gt;s_1 = \frac{\sum_{i=1}^{n_1} (x_i - \bar{x_1})^2}{n_1 -1}&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;group 2 sample variance: &lt;script type=&quot;math/tex&quot;&gt;s_2 = \frac{\sum_{j=1}^{n_2} (x_j - \bar{x_2})^2}{n_2 -1}&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;degree of freedom: &lt;script type=&quot;math/tex&quot;&gt;df = {\biggl[\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}\biggr]\over {\bigl(\frac{s_1^2}{n_1}\bigr)^2\over n_1 - 1} + {\bigl(\frac{s_2^2}{n_2}\bigr)^2\over n_2 - 1} }&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;r-code-1&quot;&gt;R Code&lt;/h4&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t.test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alternative&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;two.sided&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var.equal&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# or&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t.test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var.equal&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;h3 id=&quot;paired-t-test&quot;&gt;Paired t-test&lt;/h3&gt;
+&lt;p&gt; 
+ 
+Unlike, unpaired t-test, paired t-test is used to compare sample menas of two &lt;strong&gt;related(dependent) groups&lt;/strong&gt; (ex. pair of values; before &amp;amp; after)&lt;/p&gt;
+
+&lt;p&gt;parameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;t-test statistics value: &lt;script type=&quot;math/tex&quot;&gt;t = \frac{m}{\frac{s}{\sqrt n}}&lt;/script&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; is the mean difference between two groups&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; is the sample size of &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;s&lt;/script&gt; is the standard devidation of &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;df&lt;/script&gt;(degree of freedom) is &lt;script type=&quot;math/tex&quot;&gt;n-1&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;r-code-2&quot;&gt;R Code&lt;/h4&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-R highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t.test&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paired&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# or &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t.test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paired&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Nowgeun's Blog</title>
+   <link href="http://localhost:4000/2018/10/03/nowgeun-blog.html"/>
+   <updated>2018-10-03T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2018/10/03/nowgeun-blog</id>
+   <content type="html">&lt;p&gt;Welcome!! I am Jaekeun Lee, a student of Yonsei University majoring in Creative Technology Management and living in Seoul, Republic of Korea.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;who-am-i&quot;&gt;Who am I?&lt;/h3&gt;
+
+&lt;p&gt;I like to solve problems, challenge difficulties and influence others. 
+You can check my CV &lt;a href=&quot;/about&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;h3 id=&quot;field-of-interests&quot;&gt;Field of Interests&lt;/h3&gt;
+
+&lt;p&gt;I am interested, but not limited to, in the following fields:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Artificial Intelligence&lt;/li&gt;
+  &lt;li&gt;Statistical Thinking&lt;/li&gt;
+  &lt;li&gt;Natural Language Processing&lt;/li&gt;
+  &lt;li&gt;Social Innovation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And of course anything that is challenging or stimulates my curiosity.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+
+</feed>
