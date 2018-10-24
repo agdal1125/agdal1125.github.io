@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Python Basics III &middot; Nowgeun's Blog
+    
+
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-icon.png">
+  <link rel="shortcut icon" href="/public/favicon-96x96.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+  
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <img src="/assets/images/profile.jpg" width="130" height="130">
+
+
+    <p>A blog of Jaekeun Lee for recording life and keeping track of studies, interests and experiences</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about.html">About Me</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/archive.html">Archive</a>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/contact.html">Contact</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/tags/">Tags</a>
+        
+      
+    
+
+    <!-- <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
+    <a class="sidebar-nav-item" href="">GitHub project</a> -->
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2018. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+                  <a href="/" title="Home">Nowgeun's Blog</a>
+
+                  
+                    &nbsp;&nbsp;&nbsp;
+                    <small><a href="/about">About Me</a></small>
+                  
+                    &nbsp;&nbsp;&nbsp;
+                    <small><a href="/archive">Archive</a></small>
+                  
+                    &nbsp;&nbsp;&nbsp;
+                    <small><a href="/contact">Contact</a></small>
+                  
+                    &nbsp;&nbsp;&nbsp;
+                    <small><a href="/tags">Tags</a></small>
+                  
+
+            
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        
+
+        <div class="post">
+  <h1 class="post-title">Python Basics III</h1>
+  <span class="post-date">29 Sep 2018</span>
+  
+  <img src="/assets/images/tag-256.png" alt="Tags: " class="tag-img"/>
+<div class="post-tags">
+    
+    
+    <a href="/tags/#python">python</a>,
+    
+    <a href="/tags/#study">study</a>
+    
+</div>
+<br/>
+
+  
+  <br/>
+  
+
+  <h1 id="chapter-3---python-basics-iii">Chapter 3 - Python Basics III</h1>
+
+<p>So far, we have learned the data types used in python, assigning variables and ways to use conditional and loop statements.</p>
+
+<p>In this chapter, we will discuss about functions, modules, class and how python work in “macro-level” approach</p>
+
+<hr />
+
+<h2 id="functions">Functions</h2>
+
+<p>A function is a reusable block of code that you can call repeatedly to make calculations, output data, or really do anything that you want.</p>
+
+<p>Simply speaking, you put something in, then you get something out.</p>
+
+<p>This is one of the key aspects of using a programming language. To add to the built-in functions in Python, you can define your own!</p>
+
+<p><img src="/assets/images/function" /></p>
+
+<p>The input (or inputs) goes inside the bracket, while the output is stated mostly in the end of the definition of the function.</p>
+
+<p>Functions are defined with def, a function name, a list of parameters, and a colon. Everything indented below the colon will be included in the definition of the function.</p>
+
+<p><strong>However, the function does not always require an input or output</strong></p>
+
+<h3 id="function-with-no-input">Function with no input</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 1</span>
+
+<span class="c"># No input</span>
+
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="s">""" Prints Hello World!"""</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Hello World!"</span><span class="p">)</span>
+
+<span class="n">hello_world</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello World!
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">hello_world</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+</code></pre></div></div>
+
+<p>These type of functions are used in the following way:</p>
+
+<p><em>variable = function()</em></p>
+
+<h3 id="function-with-no-output">Function with no output</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 2</span>
+
+<span class="c"># No output</span>
+
+<span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"the sum of {0} and {1} is {2}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">))</span>
+    
+<span class="n">a</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>the sum of 3 and 4 is 7
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># Output can only be shown with "return" inside the function</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>None
+</code></pre></div></div>
+
+<p>These type of functions are used in the following way:</p>
+
+<p><em>function(input1, input2 ….)</em></p>
+
+<h3 id="function-with-no-input-nor-output">Function with no input nor output</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">say</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Hi"</span><span class="p">)</span>
+    
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">say</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hi
+</code></pre></div></div>
+
+<p>These type of functions are used in the following way:</p>
+
+<p><strong>function()</strong></p>
+
+<h3 id="function-in-general">Function in General</h3>
+
+<h4 id="as-any-variable-defined-purely-within-a-function-will-not-exist-outside-of-it">as any variable defined purely within a function will not exist outside of it.</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">see_the_scope</span><span class="p">():</span>
+    <span class="n">in_function_string</span> <span class="o">=</span> <span class="s">"I'm stuck in here!"</span>
+
+<span class="n">see_the_scope</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="n">in_function_string</span><span class="p">)</span> <span class="c"># This will not work</span>
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-3-fa033ebcbb3e&gt; in &lt;module&gt;()
+      4 see_the_scope()
+      5 
+----&gt; 6 print (in_function_string) # This will not work
+
+
+NameError: name 'in_function_string' is not defined
+</code></pre></div></div>
+
+<p>The scope of a variable is the part of a block of code where that variable is tied to a particular value. Functions in Python have an enclosed scope, making it so that variables defined within them can only be accessed directly within them.</p>
+
+<p>If we pass those values to a <strong>return</strong> statement we can get them out of the function. This makes it so that the function call returns values so that you can store them in variables that have a greater scope.</p>
+
+<p>In this case specifically,including a return statement allows us to keep the string value that we define in the function.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">free_the_scope</span><span class="p">():</span>
+    <span class="n">in_function_string</span> <span class="o">=</span> <span class="s">"Anything you can do I can do better!"</span>
+    <span class="k">return</span> <span class="n">in_function_string</span>
+
+<span class="n">my_string</span> <span class="o">=</span> <span class="n">free_the_scope</span><span class="p">()</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Anything you can do I can do better!
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 2</span>
+
+<span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
+    <span class="s">""" Calculates the volumne of a rectangular prism"""</span>
+    
+    <span class="k">return</span> <span class="n">length</span><span class="o">*</span><span class="n">width</span><span class="o">*</span><span class="n">depth</span>
+
+<span class="n">volume</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>140
+</code></pre></div></div>
+
+<h3 id="function-with-arbitrary-inputs">Function with arbitrary inputs</h3>
+
+<p>If we want to, we can define a function so that it takes an arbitrary number of parameters. We tell Python that we want this by using an asterisk (*).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sum_values</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">sum_val</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="n">sum_val</span> <span class="o">+=</span> <span class="n">i</span>
+    
+    <span class="k">return</span> <span class="n">sum_val</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">sum_values</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sum_values</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>15
+8
+</code></pre></div></div>
+
+<p>The time to use *args as a parameter for your function is when you do not know how many values may be passed to it, as in the case of our sum function. The asterisk in this case is the syntax that tells Python that you are going to pass an arbitrary number of parameters into your function. These parameters are stored in the form of a <strong>tuple</strong>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
+
+<span class="n">test_args</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;class 'tuple'&gt;
+</code></pre></div></div>
+
+<h3 id="function-only-has-one-return-value">Function only has one return value</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sum_and_mul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">sum_and_mul_fake</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">sum_and_mul</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c"># The result is 1 tuple value</span>
+
+<span class="n">result2</span> <span class="o">=</span> <span class="n">sum_and_mul_fake</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result2</span><span class="p">)</span> <span class="c"># only returns 1 result</span>
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(7, 10)
+7
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="user-input-and-print">User Input and Print</h2>
+
+<p><img src="attachment:input.png" alt="input.png" /></p>
+
+<p>Most of the programs and software that we use today, requires user input. Login, password are representative examples. In this part, we will learn how to adopt user input with python</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c"># enter what you want to say!</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"This is me"
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'"This is me"'
+</code></pre></div></div>
+
+<h3 id="receiving-user-input-via-prompt">Receiving User input via prompt</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">input</span><span class="p">(</span><span class="s">"Please enter your favorite color"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Please enter your favorite colorit is black
+
+
+
+
+
+'it is black'
+</code></pre></div></div>
+
+<h3 id="printing-results-in-a-single-line">Printing results in a single line</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">" "</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 1 2 3 4 5 6 7 8 9 
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">"and"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0and1and2and3and4and5and6and7and8and9and
+</code></pre></div></div>
+
+<h3 id="printing-strings">Printing Strings</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"I"</span> <span class="s">"love"</span> <span class="s">"you"</span> <span class="s">"so"</span> <span class="s">"much"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"I"</span><span class="o">+</span><span class="s">"love"</span><span class="o">+</span><span class="s">"you"</span><span class="o">+</span><span class="s">"so"</span><span class="o">+</span><span class="s">"much"</span><span class="p">)</span>
+
+<span class="c"># Comma provides space</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"I "</span> <span class="s">"love "</span> <span class="s">"you "</span> <span class="s">"so "</span> <span class="s">"much "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"I"</span><span class="p">,</span><span class="s">"love"</span><span class="p">,</span><span class="s">"you"</span><span class="p">,</span><span class="s">"so"</span><span class="p">,</span><span class="s">"much"</span><span class="p">)</span>
+
+<span class="c"># Enter (line change)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"H""</span><span class="se">\n</span><span class="s">""i"</span><span class="p">)</span>
+
+<span class="c"># Tab</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"this"</span><span class="p">,</span><span class="s">"is"</span><span class="p">,</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span><span class="s">"tab"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Iloveyousomuch
+Iloveyousomuch
+I love you so much 
+I love you so much
+H
+i
+this is 	 tab
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="class">Class</h2>
+
+<p><img src="attachment:class.jpg" alt="class.jpg" /></p>
+
+<p>This picture above explains the definition of class in the best way.
+Class is the stamp that shapes the cookies (objects/variables). They allow programmers to create variables with same characteristics defined by the class.</p>
+
+<p><strong>Functions</strong> : they <strong>do</strong> specific things</p>
+
+<p><strong>Classes</strong>: they <strong>are</strong> specific things</p>
+
+<p>Let’s look at the examples and see what exactly Class is</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 0.5</span>
+
+<span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>__main__.Calculator
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 1</span>
+
+<span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first</span> <span class="o">=</span> <span class="n">first</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="n">second</span>
+    
+    <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">first</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
+        <span class="k">return</span> <span class="n">result</span>
+    
+    <span class="k">def</span> <span class="nf">sub</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">first</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
+        <span class="k">return</span> <span class="n">result</span>
+    
+    <span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">first</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
+        <span class="k">return</span> <span class="n">result</span>
+    
+    <span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">first</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+
+<span class="n">a</span><span class="o">.</span><span class="n">data</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="nb">sum</span><span class="p">(),</span> <span class="n">a</span><span class="o">.</span><span class="n">sub</span><span class="p">(),</span> <span class="n">a</span><span class="o">.</span><span class="n">mul</span><span class="p">(),</span> <span class="n">a</span><span class="o">.</span><span class="n">div</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7 -3 10 0.4
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 2</span>
+
+<span class="c"># Making a cookie stamp</span>
+<span class="k">class</span> <span class="nc">Employee</span><span class="p">:</span>
+    <span class="s">"""Common basic information of all employees"""</span>
+    <span class="n">empNum</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">salary</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="o">=</span> <span class="n">salary</span>
+        <span class="n">Employee</span><span class="o">.</span><span class="n">empNum</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">def</span> <span class="nf">show_empNum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">"Total Employee Number is {0}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Employee</span><span class="o">.</span><span class="n">empNum</span><span class="p">))</span>
+        
+    <span class="k">def</span> <span class="nf">show_empInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">"Name: "</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s">", Salary: "</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">salary</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Stamping cookies</span>
+
+<span class="n">emp1</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s">"Jake"</span><span class="p">,</span><span class="s">"3000"</span><span class="p">)</span>
+<span class="n">emp2</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s">"Mina"</span><span class="p">,</span><span class="s">"2000"</span><span class="p">)</span>
+<span class="n">emp3</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s">"John"</span><span class="p">,</span><span class="s">"1000"</span><span class="p">)</span>
+<span class="n">emp4</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s">"Mike"</span><span class="p">,</span><span class="s">"500"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Using functions defined in class</span>
+
+<span class="n">emp1</span><span class="o">.</span><span class="n">show_empInfo</span><span class="p">()</span>
+<span class="n">emp2</span><span class="o">.</span><span class="n">show_empInfo</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+<span class="n">emp3</span><span class="o">.</span><span class="n">show_empNum</span><span class="p">()</span>
+<span class="n">emp4</span><span class="o">.</span><span class="n">show_empNum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Name:  Jake , Salary:  3000
+Name:  Mina , Salary:  2000
+
+
+Total Employee Number is 4
+Total Employee Number is 4
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Total Employee Number = "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">Employee</span><span class="o">.</span><span class="n">empNum</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Employee Number = 4
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="modules">Modules</h2>
+
+<p>Module is a file that contains classes, variables or functions. It is a python file that can be “imported” and used. Python programmers can share modules and use them in their own code by importing the modules.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+
+<span class="c"># Importing Iframe function from Ipython  display file</span>
+</code></pre></div></div>
+
+<p><img src="attachment:Screenshot%20from%202018-01-09%2002-14-42.png" alt="Screenshot%20from%202018-01-09%2002-14-42.png" /><img src="attachment:Screenshot%20from%202018-01-09%2002-21-30.png" alt="Screenshot%20from%202018-01-09%2002-21-30.png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">IFrame</span><span class="p">(</span><span class="s">"http://comic.naver.com"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;iframe
+        width="800"
+        height="300"
+        src="http://comic.naver.com"
+        frameborder="0"
+        allowfullscreen
+    &gt;&lt;/iframe&gt;
+</code></pre></div></div>
+
+<h3 id="installing-modules">Installing Modules</h3>
+
+<p>Every computer has a path, or directory. It works like an address.</p>
+
+<p>“C:/Users/username/Desktop” –&gt; this is probably your 바탕화면 address</p>
+
+<p>python would also exist in a folder somewhere in your computer. If your path has been set properly, you can call pip to install required python modules.</p>
+
+<p>In the command prompt, you can type</p>
+
+<p><strong>pip3 install module_name</strong> or <strong>python3 -m pip install module_name</strong></p>
+
+<p>Depending on your environment variable, calling your pip can be slightly different.</p>
+
+<p><img src="attachment:pip.png" alt="pip.png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2018/10/11/NaiveBayes.html">
+            Naive Bayes Classifier
+            <small>11 Oct 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/10/10/Bayes-Theorem.html">
+            Bayes' Probability
+            <small>10 Oct 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/10/08/LDA-topic-modeling.html">
+            Topic Modeling and Latent Dirichlet Allocation
+            <small>08 Oct 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+ 
+        
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

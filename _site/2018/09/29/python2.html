@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Python Basics II &middot; Nowgeun's Blog
+    
+
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-icon.png">
+  <link rel="shortcut icon" href="/public/favicon-96x96.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+  
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <img src="/assets/images/profile.jpg" width="130" height="130">
+
+
+    <p>A blog of Jaekeun Lee for recording life and keeping track of studies, interests and experiences</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about.html">About Me</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/archive.html">Archive</a>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/contact.html">Contact</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/tags/">Tags</a>
+        
+      
+    
+
+    <!-- <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
+    <a class="sidebar-nav-item" href="">GitHub project</a> -->
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2018. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+                  <a href="/" title="Home">Nowgeun's Blog</a>
+
+                  
+                    &nbsp;&nbsp;&nbsp;
+                    <small><a href="/about">About Me</a></small>
+                  
+                    &nbsp;&nbsp;&nbsp;
+                    <small><a href="/archive">Archive</a></small>
+                  
+                    &nbsp;&nbsp;&nbsp;
+                    <small><a href="/contact">Contact</a></small>
+                  
+                    &nbsp;&nbsp;&nbsp;
+                    <small><a href="/tags">Tags</a></small>
+                  
+
+            
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        
+
+        <div class="post">
+  <h1 class="post-title">Python Basics II</h1>
+  <span class="post-date">29 Sep 2018</span>
+  
+  <img src="/assets/images/tag-256.png" alt="Tags: " class="tag-img"/>
+<div class="post-tags">
+    
+    
+    <a href="/tags/#python">python</a>,
+    
+    <a href="/tags/#study">study</a>
+    
+</div>
+<br/>
+
+  
+  <br/>
+  
+
+  <h1 id="chapter-2---python-basics-ii">Chapter 2 - Python Basics II</h1>
+
+<p>In the previous chapter, we learned about different data types. In comparison to learning English, we finished our alphabets. This chapter will cover how to use data types. It is time to learn about Pythonic grammar!</p>
+
+<hr />
+
+<h2 id="variables">Variables</h2>
+
+<p>We have already learned about assigning variables with different data types. In this section, more advanced approach of assigning variables will be shown</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># You can assign variables like this</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="s">"Python"</span><span class="p">,</span> <span class="s">"Grammar"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+<span class="c"># Remember, that tuple can skip brackets!</span>
+<span class="n">c</span><span class="p">,</span><span class="n">d</span> <span class="o">=</span> <span class="s">"Maplestory"</span><span class="p">,</span> <span class="s">"Crazy Arcade"</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Python
+Grammar
+Maplestory
+Crazy Arcade
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">e</span> <span class="o">=</span> <span class="n">f</span> <span class="o">=</span> <span class="s">"python"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python
+python
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Coding"</span><span class="p">,</span><span class="s">"is fun"</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Coding
+is fun
+</code></pre></div></div>
+
+<p>You can switch or reassign values like this</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c"># Switch!</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span><span class="n">a</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
+3
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c"># reassigning variable a</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="control-statements">Control Statements</h2>
+
+<p>Control and Loop statements are the basic structure of coding. They are the algorithm and flow of the code execution. Codes are executed line by line, one at a time from top to bottom. The sequence of statements that are executed is referred to as the <strong>flow of control</strong>. The flow of control can be changed with the control statements: conditional and loop statements.</p>
+
+<p><em>conditional</em></p>
+<ul>
+  <li>if</li>
+</ul>
+
+<p><em>loop</em></p>
+<ul>
+  <li>while</li>
+  <li>for</li>
+</ul>
+
+<p>When using these control statements, <strong>Indentation</strong> and <strong>:</strong> is very very very important. Conditional and Loop statements are frequently used together</p>
+
+<h3 id="conditional-statement---if">Conditional Statement - if</h3>
+
+<p>conditional statements are statements that may or may not be executed depending on certain conditions that the code specifies. The condition part is where <strong>Boolean data types</strong> and <strong>logical operators</strong> are used frequently</p>
+
+<p>Example)</p>
+
+<p>Let’s assume that there is a movie rated R, which means that the movie can only be watched by people restricted to the age 18 and over. We have to screen out people with appropriate ages. Your cousin is age 14. Let’s try this out using if statement</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">age</span> <span class="o">=</span> <span class="mi">14</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You are not allowed to watch this movie"</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Enjoy the movie!"</span><span class="p">)</span>
+    
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You are not allowed to watch this movie
+</code></pre></div></div>
+
+<h4 id="structure">Structure</h4>
+
+<p>We can create segments of code that only execute if a set of conditions is met. We use if-statements in conjunction with logical statements in order to create branches in our code.</p>
+
+<p>An if block gets entered when the condition is considered to be True. If condition is evaluated as False, the if block will simply be skipped unless there is an else block to accompany it. Conditions are made using either logical operators or by using the truthiness of values in Python. An if-statement is defined with a colon and a block of indented text.</p>
+
+<p><img src="attachment:if.png" alt="if.png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># This is the basic format of an if statement. This is a vacuous example. </span>
+
+<span class="k">if</span> <span class="s">"Condition1"</span><span class="p">:</span> 
+    <span class="c"># This block of code will execute because the string is non-empty</span>
+    <span class="c"># Everything on these indented lines</span>
+    <span class="k">print</span> <span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># So if the condition that we examined with if is in fact False</span>
+    <span class="c"># This block of code will execute INSTEAD of the first block of code</span>
+    <span class="c"># Everything on these indented lines</span>
+    <span class="k">print</span> <span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>True
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># If you want more than two control line, you should use "elif"</span>
+
+<span class="k">if</span> <span class="s">"Condition"</span><span class="p">:</span> 
+    <span class="c"># Everything on these indented lines</span>
+    <span class="k">print</span> <span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="s">"Condition2"</span><span class="p">:</span>
+    <span class="c"># This block of code will execute only if the previous statement is false</span>
+    <span class="c"># Everything on these indented lines</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"What?"</span><span class="p">)</span>
+    
+<span class="k">elif</span> <span class="s">"Condition3"</span><span class="p">:</span>
+    <span class="c"># Everything on these indented lines</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"What??"</span><span class="p">)</span>
+    
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># This block of code will execute INSTEAD of the first and the second block of code</span>
+    <span class="c"># Everything on these indented lines</span>
+    <span class="k">print</span> <span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+    
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>True
+</code></pre></div></div>
+
+<p><strong>Ways to write condition statements</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">various expressions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">x &lt; y , x &gt; y</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">x == y, x != y</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">x &gt;= y, x &lt;= y</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">x or y</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">x and y</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">not x</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">x in list , x not in list</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">x in tuple , x not in tuple</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">x in string , x not in string</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 1</span>
+
+<span class="n">money</span> <span class="o">=</span> <span class="mi">3000</span>
+<span class="n">feeling</span> <span class="o">=</span> <span class="s">"bad"</span>
+
+<span class="k">if</span> <span class="n">money</span> <span class="o">&lt;</span> <span class="mi">3000</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Walk"</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">money</span> <span class="o">&gt;=</span> <span class="mi">3000</span> <span class="ow">and</span> <span class="n">feeling</span> <span class="o">==</span> <span class="s">"good"</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Take Bus"</span><span class="p">)</span>
+    
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Take Taxi"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Take Taxi
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 2</span>
+
+<span class="n">menu</span> <span class="o">=</span> <span class="p">{</span><span class="s">"ramen"</span><span class="p">:[</span><span class="s">"flour"</span><span class="p">,</span><span class="s">"egg"</span><span class="p">,</span><span class="s">"pork"</span><span class="p">,</span><span class="s">"onion"</span><span class="p">],</span>
+       <span class="s">"spaghetti"</span><span class="p">:[</span><span class="s">"flour"</span><span class="p">,</span><span class="s">"cream"</span><span class="p">,</span><span class="s">"tomato"</span><span class="p">,</span><span class="s">"beef"</span><span class="p">,</span><span class="s">"onion"</span><span class="p">],</span>
+       <span class="s">"kimbap"</span><span class="p">:[</span><span class="s">"rice"</span><span class="p">,</span><span class="s">"carrot"</span><span class="p">,</span><span class="s">"spam"</span><span class="p">,</span><span class="s">"egg"</span><span class="p">,</span><span class="s">"spinach"</span><span class="p">,</span><span class="s">"pickle"</span><span class="p">]}</span>
+
+<span class="k">if</span> <span class="s">"flour"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">menu</span><span class="p">[</span><span class="s">"ramen"</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"I will eat ramen!!!"</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="s">"kimbap"</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Give me donkatsu"</span><span class="p">)</span>
+    
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"spaghetti for me please"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Give me donkatsu
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 3</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"{0} is even number!!!"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">'{0} is divisible by both 2 and 3! Wow!'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">'{0} is divisible by both 2 and 5! Wow!'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s">'{0} is divisible by 2, but not 3 or 5. Meh.'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">'{0} is an odd number.'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10 is even number!!!
+10 is divisible by both 2 and 5! Wow!
+</code></pre></div></div>
+
+<h3 id="loop-statement---for">Loop Statement - For</h3>
+
+<p>For is a loop statement used for going through values or iterate over any sequences (tuple, list, string).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 1</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span> 
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0
+1
+2
+3
+4
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 2</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span> 
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0
+1
+2
+3
+4
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 3</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+7
+11
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 4</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="stopping-the-loop">Stopping the Loop</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0
+1
+</code></pre></div></div>
+
+<h3 id="loop-statement---while">Loop Statement - While</h3>
+
+<p>with While loops we need to make sure that something actually changes from iteration to iteration so that that the loop actually terminates.</p>
+
+<p>If not, the infinite loop will be created, and your code execution will not stop. In this case, we use the shorthand i -= 1 (short for i = i - 1) so that the value of i gets smaller with each iteration. Eventually i will be reduced to 0, rendering the condition False and exiting the loop. Or, you can use <strong>break</strong> or use <strong>conditional statements</strong> to stop the loop</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 1</span>
+
+<span class="n">treeHit</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">treeHit</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">treeHit</span> <span class="o">=</span> <span class="n">treeHit</span> <span class="o">+</span><span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Tree hit </span><span class="si">%</span><span class="s">d times."</span> <span class="o">%</span> <span class="n">treeHit</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">treeHit</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Tree falls."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Tree hit 1 times.
+Tree hit 2 times.
+Tree hit 3 times.
+Tree hit 4 times.
+Tree hit 5 times.
+Tree hit 6 times.
+Tree hit 7 times.
+Tree hit 8 times.
+Tree hit 9 times.
+Tree hit 10 times.
+Tree falls.
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 2</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">14</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c"># This is shorthand for i = i + 1.</span>
+    <span class="k">print</span><span class="p">(</span> <span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>11
+12
+13
+14
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example 3</span>
+
+<span class="n">Stamina</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">apple</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="k">while</span> <span class="n">Stamina</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="n">Stamina</span> <span class="o">-=</span> <span class="mi">5</span>
+         
+    <span class="k">while</span> <span class="n">Stamina</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="o">&amp;</span> <span class="n">apple</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Eat apple"</span><span class="p">)</span>
+        <span class="n">Stamina</span> <span class="o">+=</span> <span class="mi">10</span>
+        <span class="n">apple</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Remaning apple is {0}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">apple</span><span class="p">))</span>
+   
+    <span class="k">print</span><span class="p">(</span><span class="s">"Current Stamina is {0}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Stamina</span><span class="p">))</span>
+    
+    <span class="k">if</span> <span class="n">Stamina</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"You are Dead"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span> 
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Current Stamina is 45
+Current Stamina is 40
+Current Stamina is 35
+Current Stamina is 30
+Current Stamina is 25
+Current Stamina is 20
+Current Stamina is 15
+Current Stamina is 10
+Current Stamina is 5
+Eat apple
+Remaning apple is 2
+Current Stamina is 10
+Current Stamina is 5
+Eat apple
+Remaning apple is 1
+Current Stamina is 10
+Current Stamina is 5
+Current Stamina is 0
+You are Dead
+</code></pre></div></div>
+
+<h3 id="break-continue-pass">Break, Continue, Pass</h3>
+
+<p><strong>Break, Continue, Pass</strong> statements are used to work with loop and conditions more efficiently and effectively.</p>
+
+<p><strong>Break</strong> statements provide the opportunity to stop and exit the loop completely when external condition is triggered.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span> <span class="c"># external condition</span>
+        <span class="k">break</span>    <span class="c"># break here</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">'Number is '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'Out of loop'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number is 1
+Number is 2
+Number is 3
+Number is 4
+Out of loop
+</code></pre></div></div>
+
+<p><strong>Continue</strong> statements allows you to skip over a part of loop when external condition is triggered, but go on to complete the rest of the loop.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span> <span class="c"># external condition</span>
+        <span class="k">continue</span>    <span class="c"># break here</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">'Number is '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>  <span class="c"># Number is 5 will not be printed</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'Out of loop'</span><span class="p">)</span>  
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number is 1
+Number is 2
+Number is 3
+Number is 4
+Number is 6
+Number is 7
+Number is 8
+Number is 9
+Number is 10
+Out of loop
+</code></pre></div></div>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Pass</strong> statement allows to handle the condition without the loop being impacted in any way.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span> <span class="c"># external condition</span>
+        <span class="k">pass</span>   <span class="c"># break here</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">'Number is '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">))</span> 
+
+<span class="k">print</span><span class="p">(</span><span class="s">'Out of loop'</span><span class="p">)</span>  
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number is 1
+Number is 2
+Number is 3
+Number is 4
+Number is 5
+Number is 6
+Number is 7
+Number is 8
+Number is 9
+Number is 10
+Out of loop
+</code></pre></div></div>
+
+<hr />
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2018/10/11/NaiveBayes.html">
+            Naive Bayes Classifier
+            <small>11 Oct 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/10/10/Bayes-Theorem.html">
+            Bayes' Probability
+            <small>10 Oct 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/10/08/LDA-topic-modeling.html">
+            Topic Modeling and Latent Dirichlet Allocation
+            <small>08 Oct 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+ 
+        
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
