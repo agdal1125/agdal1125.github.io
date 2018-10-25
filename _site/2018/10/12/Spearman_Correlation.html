@@ -11,7 +11,7 @@
 
   <title>
     
-      Nowgeun's Blog &middot; Nowgeun's Blog
+      Spearman Correlation &middot; Nowgeun's Blog
     
 
   </title>
@@ -144,20 +144,39 @@
 
       <div class="container content">
         
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    processEscapes: true
+                       }
+                    });
+    </script>
+<script
+    type="text/javascript"
+    charset="utf-8"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    >
+    </script>
+<script
+    type="text/javascript"
+    charset="utf-8"
+    src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
+    >
+    </script>
+
 
         <div class="post">
-  <h1 class="post-title">Nowgeun's Blog</h1>
-  <span class="post-date">26 Sep 2018</span>
+  <h1 class="post-title">Spearman Correlation</h1>
+  <span class="post-date">12 Oct 2018</span>
   
   <img src="/assets/images/tag-256.png" alt="Tags: " class="tag-img"/>
 <div class="post-tags">
     
     
-    <a href="/tags/#blog">blog</a>,
+    <a href="/tags/#python3">python3</a>,
     
-    <a href="/tags/#study">study</a>,
-    
-    <a href="/tags/#life">life</a>
+    <a href="/tags/#statistics">statistics</a>
     
 </div>
 <br/>
@@ -165,31 +184,81 @@
   
   <br/>
   
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    processEscapes: true
+                       }
+                    });
+    </script>
+<script
+    type="text/javascript"
+    charset="utf-8"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    >
+    </script>
+<script
+    type="text/javascript"
+    charset="utf-8"
+    src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
+    >
+    </script>
 
-  <p>Welcome!! I am Jaekeun Lee, a student of Yonsei University majoring in Creative Technology Management and living in Seoul, Republic of Korea.</p>
+
+  <h2 id="correlation">Correlation</h2>
+
+<p>Correlation is a concept that is used to measure the association between variables, whether they are related or not. If the variables are related examining whether the relationship is positive or negative, or whether a specific model can explain the relationship. (Linear, non-linear)</p>
 
 <p> </p>
 
-<h3 id="who-am-i">Who am I?</h3>
-
-<p>I like to solve problems, challenge difficulties and influence others. 
-You can check my CV <a href="/about">here</a>.</p>
+<p>For example, pearson correlation measure the <strong>“linearity”</strong> of two continuous variables, assuming that the two variables follow normal distribution.</p>
 
 <p> 
+ 
  </p>
 
-<h3 id="field-of-interests">Field of Interests</h3>
-
-<p>I am interested, but not limited to, in the following fields:</p>
+<h3 id="spearman-correlation-rho">Spearman Correlation ($\rho$)</h3>
 
 <ul>
-  <li>Artificial Intelligence</li>
-  <li>Statistical Thinking</li>
-  <li>Natural Language Processing</li>
-  <li>Social Innovation</li>
+  <li>
+    <p>Spearman’s Correlation measures the correlation between two variables, taking their rankings into account. It evaluates the variables in a <strong>non-parametric way</strong>; meaning that it uses statistical method where data is not required to follow a normal distribution. In other words, Spearman correlation <em>does not assume anything about the distribution of data.</em></p>
+  </li>
+  <li>The assumption required for Spearman correlation are that:
+    <ul>
+      <li>the data must be at least ordinal</li>
+      <li>the scores on one variable must be <strong>monotonically</strong> related to the other variable.</li>
+    </ul>
+
+    <p><img src="/assets/images/monotonic.png" /></p>
+
+    <p> </p>
+  </li>
+  <li>The correlation is calcuated as a following equation: $\rho = 1 - \frac{6 \sum d_{i}^{2}}{n(n^{2}-1)}$
+    <ul>
+      <li>$\rho$ : Spearman rank correlation</li>
+      <li>$d_i$ : the difference between the ranks of corresponding variables</li>
+      <li>$n$ : number of observations</li>
+    </ul>
+  </li>
 </ul>
 
-<p>And of course anything that is challenging or stimulates my curiosity.</p>
+<p> 
+ 
+ </p>
+
+<h4 id="interpreting-the-value-of-spearman-correlation">Interpreting the value of Spearman Correlation</h4>
+
+<ul>
+  <li>
+    <p>The Spearman correlation coefficient can take values from +1 to -1 
+ <script type="math/tex">% <![CDATA[
+( -1 < \rho < +1) %]]></script></p>
+  </li>
+  <li>
+    <p>+1 indicates a perfect association of ranks, while -1 indicates a perfect negative association between ranks. The closer value to 0, implies the weaker association between the ranks.</p>
+  </li>
+</ul>
 
 
 </div>
@@ -197,15 +266,6 @@ You can check my CV <a href="/about">here</a>.</p>
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2018/10/12/Spearman_Correlation.html">
-            Spearman Correlation
-            <small>12 Oct 2018</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -225,11 +285,35 @@ You can check my CV <a href="/about">here</a>.</p>
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/2018/10/08/LDA-topic-modeling.html">
+            Topic Modeling and Latent Dirichlet Allocation
+            <small>08 Oct 2018</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 
  
         
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "https-agdal1125-github-io"
+    var disqus_identifier = "/2018/10/12/Spearman_Correlation.html";
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
 
       </div>
     </div>

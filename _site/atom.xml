@@ -4,13 +4,75 @@
  <title>Nowgeun's Blog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2018-10-24T20:31:18+09:00</updated>
+ <updated>2018-10-25T20:52:34+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Jaekeun Lee</name>
    <email>agdal1125@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Spearman Correlation</title>
+   <link href="http://localhost:4000/2018/10/12/Spearman_Correlation.html"/>
+   <updated>2018-10-12T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2018/10/12/Spearman_Correlation</id>
+   <content type="html">&lt;h2 id=&quot;correlation&quot;&gt;Correlation&lt;/h2&gt;
+
+&lt;p&gt;Correlation is a concept that is used to measure the association between variables, whether they are related or not. If the variables are related examining whether the relationship is positive or negative, or whether a specific model can explain the relationship. (Linear, non-linear)&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;For example, pearson correlation measure the &lt;strong&gt;“linearity”&lt;/strong&gt; of two continuous variables, assuming that the two variables follow normal distribution.&lt;/p&gt;
+
+&lt;p&gt; 
+ 
+ &lt;/p&gt;
+
+&lt;h3 id=&quot;spearman-correlation-rho&quot;&gt;Spearman Correlation ($\rho$)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Spearman’s Correlation measures the correlation between two variables, taking their rankings into account. It evaluates the variables in a &lt;strong&gt;non-parametric way&lt;/strong&gt;; meaning that it uses statistical method where data is not required to follow a normal distribution. In other words, Spearman correlation &lt;em&gt;does not assume anything about the distribution of data.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The assumption required for Spearman correlation are that:
+    &lt;ul&gt;
+      &lt;li&gt;the data must be at least ordinal&lt;/li&gt;
+      &lt;li&gt;the scores on one variable must be &lt;strong&gt;monotonically&lt;/strong&gt; related to the other variable.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/monotonic.png&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt; &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The correlation is calcuated as a following equation: $\rho = 1 - \frac{6 \sum d_{i}^{2}}{n(n^{2}-1)}$
+    &lt;ul&gt;
+      &lt;li&gt;$\rho$ : Spearman rank correlation&lt;/li&gt;
+      &lt;li&gt;$d_i$ : the difference between the ranks of corresponding variables&lt;/li&gt;
+      &lt;li&gt;$n$ : number of observations&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; 
+ 
+ &lt;/p&gt;
+
+&lt;h4 id=&quot;interpreting-the-value-of-spearman-correlation&quot;&gt;Interpreting the value of Spearman Correlation&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The Spearman correlation coefficient can take values from +1 to -1 
+ &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+( -1 &lt; \rho &lt; +1) %]]&gt;&lt;/script&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;+1 indicates a perfect association of ranks, while -1 indicates a perfect negative association between ranks. The closer value to 0, implies the weaker association between the ranks.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Naive Bayes Classifier</title>
@@ -619,7 +681,7 @@ Unlike, unpaired t-test, paired t-test is used to compare sample menas of two &l
 
 &lt;p&gt;This is one of the key aspects of using a programming language. To add to the built-in functions in Python, you can define your own!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/function&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/function.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The input (or inputs) goes inside the bracket, while the output is stated mostly in the end of the definition of the function.&lt;/p&gt;
 

@@ -90,6 +90,10 @@
       
     
       
+        
+      
+    
+      
     
       
         
@@ -163,6 +167,108 @@
 
 
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="//2018/10/12/Spearman_Correlation.html">
+        Spearman Correlation
+      </a>
+    </h1>
+    
+    <span class="post-date">12 Oct 2018</span>
+    <img src="/assets/images/tag-256.png" alt="Tags: " class="tag-img"/>
+<div class="post-tags">
+    
+    
+    <a href="/tags/#python3">python3</a>,
+    
+    <a href="/tags/#statistics">statistics</a>
+    
+</div>
+<br/>
+
+    <br/>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    processEscapes: true
+                       }
+                    });
+    </script>
+<script
+    type="text/javascript"
+    charset="utf-8"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    >
+    </script>
+<script
+    type="text/javascript"
+    charset="utf-8"
+    src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
+    >
+    </script>
+
+
+    <h2 id="correlation">Correlation</h2>
+
+<p>Correlation is a concept that is used to measure the association between variables, whether they are related or not. If the variables are related examining whether the relationship is positive or negative, or whether a specific model can explain the relationship. (Linear, non-linear)</p>
+
+<p> </p>
+
+<p>For example, pearson correlation measure the <strong>“linearity”</strong> of two continuous variables, assuming that the two variables follow normal distribution.</p>
+
+<p> 
+ 
+ </p>
+
+<h3 id="spearman-correlation-rho">Spearman Correlation ($\rho$)</h3>
+
+<ul>
+  <li>
+    <p>Spearman’s Correlation measures the correlation between two variables, taking their rankings into account. It evaluates the variables in a <strong>non-parametric way</strong>; meaning that it uses statistical method where data is not required to follow a normal distribution. In other words, Spearman correlation <em>does not assume anything about the distribution of data.</em></p>
+  </li>
+  <li>The assumption required for Spearman correlation are that:
+    <ul>
+      <li>the data must be at least ordinal</li>
+      <li>the scores on one variable must be <strong>monotonically</strong> related to the other variable.</li>
+    </ul>
+
+    <p><img src="/assets/images/monotonic.png" /></p>
+
+    <p> </p>
+  </li>
+  <li>The correlation is calcuated as a following equation: $\rho = 1 - \frac{6 \sum d_{i}^{2}}{n(n^{2}-1)}$
+    <ul>
+      <li>$\rho$ : Spearman rank correlation</li>
+      <li>$d_i$ : the difference between the ranks of corresponding variables</li>
+      <li>$n$ : number of observations</li>
+    </ul>
+  </li>
+</ul>
+
+<p> 
+ 
+ </p>
+
+<h4 id="interpreting-the-value-of-spearman-correlation">Interpreting the value of Spearman Correlation</h4>
+
+<ul>
+  <li>
+    <p>The Spearman correlation coefficient can take values from +1 to -1 
+ <script type="math/tex">% <![CDATA[
+( -1 < \rho < +1) %]]></script></p>
+  </li>
+  <li>
+    <p>+1 indicates a perfect association of ranks, while -1 indicates a perfect negative association between ranks. The closer value to 0, implies the weaker association between the ranks.</p>
+  </li>
+</ul>
+
+
+    <br/>
+    <br/>
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -705,122 +811,6 @@ vectorizer = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
 
 # matrix of all documents in rows and idf values of respective words in column
 matrix = vectorizer.fit_transform(token_dict.values())
-</code></pre></div></div>
-
-
-    <br/>
-    <br/>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="//2018/10/06/Web-crawling-with-bs4.html">
-        Web Crawling with BeautifulSoup
-      </a>
-    </h1>
-    
-    <span class="post-date">06 Oct 2018</span>
-    <img src="/assets/images/tag-256.png" alt="Tags: " class="tag-img"/>
-<div class="post-tags">
-    
-    
-    <a href="/tags/#web crawling">web crawling</a>,
-    
-    <a href="/tags/#python3">python3</a>,
-    
-    <a href="/tags/#beautifulsoup">beautifulsoup</a>
-    
-</div>
-<br/>
-
-    <br/>
-    
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-                tex2jax: {
-                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                    processEscapes: true
-                       }
-                    });
-    </script>
-<script
-    type="text/javascript"
-    charset="utf-8"
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    >
-    </script>
-<script
-    type="text/javascript"
-    charset="utf-8"
-    src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
-    >
-    </script>
-
-
-    <h2 id="webcrawling">Webcrawling</h2>
-
-<p>Web crawling allows users to gather data directly from the internet. Web crawling is an act of software that explores world wide web (www) is an autonomous way to gather data. Portal’s search engines are based on these web crawlers that visits a myriad of web pages and collect data.</p>
-
-<p> 
- </p>
-
-<h3 id="how-it-works">How it works</h3>
-
-<p>The internet is a collection of web pages formed by HTML (Hyper Text Markup Language). We navigate these HTML pages through browser (<em>Chrome, Firefox, Safari, Internet Explorer, etc..)</em> which facilitates exploration of web through Graphic User Interfaces (GUI) and various plugins. Web crawling is done by parsing the HTML, filtering necessary parts and saving them into files.</p>
-
-<h3 id="cautions">Cautions</h3>
-
-<ul>
-  <li>There may be legal penalties depending on the website that you wish to crawl</li>
-  <li>Some websites has policies against web crawling (<em>e.g. robots.txt</em> contains information about data collection policy)</li>
-  <li>Web crawling may cause traffic overload and this is pertinent to security issues</li>
-</ul>
-
-<p> 
- </p>
-
-<h2 id="basic-web-crawling-with-python3">Basic Web Crawling with Python3</h2>
-
-<p>Required libaries: bs4, requests,</p>
-
-<p> 
- </p>
-
-<h3 id="simple-web-crawling">Simple Web Crawling</h3>
-
-<p> </p>
-
-<p>Simple web crawling can be achieved by using bs4 and requests libraries. The tricky part is in understanding structure of html and finding tags where the desired information  belongs.</p>
-
-<p> </p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import requests
-from bs4 import BeautifulSoup
-
-# Connect to website via requests module
-url = requests.get("your url that you wish to access")
-
-# Retrieve html
-html = url.text
-
-# Parse the html data with BeautifulSoup
-soup = BeautifulSoup(html, 'html.parser')
-
-# You can see the HTML Raw Source code from the website that you have accessed
-print(soup)
-
-
-# Retrieving specific information, using html tags
-
-### This retrieves the first html tag that has "div" tag and its class name "itemname"
-print(soup.find("div",{"class":"itemname"))
-
-### find_all function retrieves all tags that has "a" tag in the raw source codes
-### shown as a list form
-print(soup.find_all("a"))
-
-### get_text() function retrieves only text information from the specified tags
-soup.find("div",{"id":"item_number").get_text()
 </code></pre></div></div>
 
 
