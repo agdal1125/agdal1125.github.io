@@ -170,6 +170,1104 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="//2018/09/28/python1.html">
+        Python Basics I
+      </a>
+    </h1>
+    
+    <span class="post-date">28 Sep 2018</span>
+    <img src="/assets/images/tag-256.png" alt="Tags: " class="tag-img"/>
+<div class="post-tags">
+    
+    
+    <a href="/tags/#python">python</a>,
+    
+    <a href="/tags/#study">study</a>
+    
+</div>
+<br/>
+
+    <br/>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    processEscapes: true
+                       }
+                    });
+    </script>
+<script
+    type="text/javascript"
+    charset="utf-8"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    >
+    </script>
+<script
+    type="text/javascript"
+    charset="utf-8"
+    src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
+    >
+    </script>
+
+
+    <h1 id="chapter-1---python-basics-i">Chapter 1 - Python Basics I</h1>
+
+<h2 id="python-is-an-intuitive-language">Python is an intuitive language</h2>
+
+<p>Python is very intuitive, compared to other programming languages. This is why people say that it is easy to learn for beginners.</p>
+
+<p>Let’s look at the example below</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span><span class="mi">3</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">"correct"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>correct
+</code></pre></div></div>
+
+<p>Just by reading this code, most people can catch what this code is saying.</p>
+
+<p>The first line says that “x” equals to 3
+The second line says that if “x” equals to 3, print the word “correct”</p>
+
+<p>Pretty easy eh?</p>
+
+<hr />
+
+<h2 id="code-comments">Code Comments</h2>
+
+<p>Code comment is used for explanation from developers. They are ignored during code execution. Code comments can be made after a hashtag. For more multiple code comments, use of three quotations are used. Below is an example</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># This is a comment</span>
+<span class="c"># The comment section is ignored during the code execution</span>
+</code></pre></div></div>
+
+<p>The multiline comments do not perform anythin,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"""
+This is a multi-line comment. It is a special type of string called, Doc-string.
+Normally, they are used for detailed explanation of codes, or long comments
+"""</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'\nThis is a multi-line comment. It is a special type of string called, Doc-string.\nNormally, they are used for detailed explanation of codes, or long comments\n'
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="data-types">Data Types</h2>
+
+<p>When you learn English, alphabet is the fundamental unit of knowledge. Python is also a programming <strong>“language”</strong>. Importance of data types are equivalent to knowing the alphabets.</p>
+
+<p>These are main data types of python:</p>
+
+<ul>
+  <li>Numbers</li>
+  <li>Strings</li>
+  <li>Boolean</li>
+  <li>Lists</li>
+  <li>Tuples</li>
+  <li>Dictionary</li>
+  <li>Set</li>
+</ul>
+
+<p>Let’s cover these data types one by one</p>
+
+<h3 id="numbers"><em>Numbers</em></h3>
+
+<p>Numbers include integers, floating numbers and complex numbers. If you have done your mathematics, these terms should be familiar. Also, there are octal and hexadecimal numbers which are not frequently used in general python programming.</p>
+
+<ul>
+  <li>integers –&gt; <em>int</em></li>
+  <li>floating number –&gt; <em>float</em></li>
+  <li>complex number –&gt; <em>complex</em></li>
+</ul>
+
+<p>Let’s look at them one by one</p>
+
+<h4 id="integer">Integer</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Integer</span>
+<span class="c">## Integer is a real number. </span>
+<span class="c">#It is a round number with no values after decimal point</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c"># Simple line that orders to show (print) x</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c"># This shows what the data type of x is</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>50
+
+
+
+
+
+int
+</code></pre></div></div>
+
+<p>Variables are assigned by using a single equation sign “=”. They are case sensitive, but using similar variables are not recommended in a complex coding, due to confusion and readability</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">one</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">One</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">one</span><span class="p">,</span> <span class="n">One</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3 6
+</code></pre></div></div>
+
+<h4 id="float">Float</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Floating Point</span>
+<span class="c"># Floating point is a name for a real number.</span>
+<span class="c"># It may have numbers after the decimal point</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="mf">1.4</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mf">4.0</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+<span class="c"># you can use int() function to make float to integer</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+
+<span class="c">#You can use float() function to force a number to be considered as a float</span>
+<span class="n">my_int</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_int</span><span class="p">))</span>
+
+<span class="n">my_int2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_int2</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.4
+4.0
+1
+4
+&lt;class 'int'&gt;
+&lt;class 'float'&gt;
+</code></pre></div></div>
+
+<h4 id="complex">Complex</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Complex</span>
+<span class="c"># Complex is a complex number. </span>
+<span class="c"># It is a number that can be expressed in the form of a + bi</span>
+<span class="c"># a, b are real numbers while i is the solution of x^2= -1</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(2+4j) (1+5j) (3+9j)
+</code></pre></div></div>
+
+<h4 id="basic-math">Basic Math</h4>
+
+<p>Python has a number of built-in math functions. These can be extended even further by importing the math package or by including any number of other calculation-based packages.</p>
+
+<p>All of the basic arithmetic operations are supported: +, -, /, and . You can create exponents by using * and modular arithmetic is introduced with the mod operator, %.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span> <span class="p">(</span><span class="s">'Addition: '</span><span class="p">,</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">'Subtraction: '</span><span class="p">,</span> <span class="mi">7</span> <span class="o">-</span> <span class="mi">4</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">'Multiplication: '</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">'Division: '</span><span class="p">,</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">'Exponentiation: '</span><span class="p">,</span> <span class="mi">3</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">'Modulo: '</span><span class="p">,</span> <span class="mi">15</span> <span class="o">%</span> <span class="mi">4</span><span class="p">)</span> <span class="c"># remainder</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Addition:  4
+Subtraction:  3
+Multiplication:  10
+Division:  5.0
+Exponentiation:  9
+Modulo:  3
+</code></pre></div></div>
+
+<p>This also works on variables</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">first_integer</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">second_integer</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">first_integer</span> <span class="o">*</span> <span class="n">second_integer</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>20
+
+
+
+
+
+1
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">first_integer</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">second_integer</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">first_integer</span> <span class="o">/</span> <span class="n">second_integer</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3.6666666666666665
+</code></pre></div></div>
+
+<p><strong>Python’s built-in math functions</strong></p>
+
+<ul>
+  <li>abs()</li>
+  <li>round()</li>
+  <li>max()</li>
+  <li>min()</li>
+  <li>sum()</li>
+</ul>
+
+<p>These functions all act as you would expect, given their names. Calling abs() on a number will return its absolute value. The round() function will round a number to a specified number of the decimal points (the default is 00 ). Calling max() or min() on a collection of numbers will return, respectively, the maximum or minimum value in the collection. Calling sum() on a collection of numbers will add them all up. If you’re not familiar with how collections of values in Python work, don’t worry! We will cover collections in-depth in the next section.</p>
+
+<h3 id="strings"><em>Strings</em></h3>
+
+<p>string is a data type that lets you include text as a variable. They are defined using single quotes or double quotes</p>
+
+<p>Both are allowed so that we can include apostrophes or quotation marks in a string if we so choose.</p>
+
+<p>You may use \ to include apostrophes or quotation marks into the string</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">say_hello</span> <span class="o">=</span> <span class="s">"Hello. My name is python"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">say_hello</span><span class="p">)</span>
+
+<span class="n">say_bye</span> <span class="o">=</span> <span class="s">'Bye. It was nice to meet you'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">say_bye</span><span class="p">)</span>
+
+<span class="n">my_string</span> <span class="o">=</span> <span class="s">'"Jabberwocky", by Lewis Carroll'</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
+
+<span class="n">my_string</span> <span class="o">=</span> <span class="s">"'Twas brillig, and the slithy toves / Did gyre and gimble in the wabe;"</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
+
+<span class="n">alt_string</span> <span class="o">=</span> <span class="s">'He said, </span><span class="se">\'</span><span class="s">this is ridiculous.</span><span class="se">\'</span><span class="s">'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">alt_string</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello. My name is python
+Bye. It was nice to meet you
+"Jabberwocky", by Lewis Carroll
+'Twas brillig, and the slithy toves / Did gyre and gimble in the wabe;
+He said, 'this is ridiculous.'
+</code></pre></div></div>
+
+<h4 id="calculation-in-strings">Calculation in Strings</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Addition</span>
+<span class="n">first_name</span> <span class="o">=</span> <span class="s">"Harry"</span> 
+<span class="n">last_name</span> <span class="o">=</span> <span class="s">"Potter"</span>
+
+<span class="n">first_name</span> <span class="o">+</span> <span class="n">last_name</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'HarryPotter'
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Multiplication</span>
+<span class="n">twice</span> <span class="o">=</span> <span class="s">"likey"</span>
+<span class="n">twice</span><span class="o">*</span><span class="mi">2</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'likeylikey'
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Usage</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"="</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Oh Yeah"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"="</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>========================================
+Oh Yeah
+========================================
+</code></pre></div></div>
+
+<p><strong>Indexing and Slicing</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sentence</span> <span class="o">=</span> <span class="s">"wingardium leviosa"</span>
+
+<span class="c"># Python starts from 0</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a
+w
+s
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Usage</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">sentence</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">+</span> <span class="n">sentence</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="o">+</span> <span class="n">sentence</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="o">+</span> <span class="n">sentence</span><span class="p">[</span><span class="mi">12</span><span class="p">])</span>
+
+<span class="c"># sentence[0:4] --&gt; 0&lt;= sentence &lt; 4</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">sentence</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>love
+wing
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Changing string by indexing</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s">"League of Leg nd"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c"># You cannot change string or tuple. These are called imutable data types</span>
+<span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s">"e"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>League of Leg nd
+
+
+
+---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-56-e0f9681d392f&gt; in &lt;module&gt;()
+      4 
+      5 # You cannot change string or tuple. These are called imutable data types
+----&gt; 6 a[-3] = "e"
+      7 print(a)
+
+
+TypeError: 'str' object does not support item assignment
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">correct</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:</span><span class="mi">7</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="s">"e"</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>League of Legend
+</code></pre></div></div>
+
+<h4 id="formatting-strings">Formatting Strings</h4>
+
+<p>Using the format() method we can add in variable values and generally format our strings.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_string</span> <span class="o">=</span> <span class="s">"{0} {1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">'Marco'</span><span class="p">,</span> <span class="s">'Polo'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">my_string</span><span class="p">)</span>
+
+<span class="n">my_string</span> <span class="o">=</span> <span class="s">"{1} {0}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">'Marco'</span><span class="p">,</span> <span class="s">'Polo'</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Marco Polo
+Polo Marco
+</code></pre></div></div>
+
+<p>We use braces ({}) to indicate parts of the string that will be filled in later and we use the arguments of the format() function to provide the values to substitute. The numbers within the braces indicate the index of the value in the format() arguments</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span> <span class="p">(</span><span class="s">'insert </span><span class="si">%</span><span class="s">s here'</span> <span class="o">%</span> <span class="s">'value'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>insert value here
+</code></pre></div></div>
+
+<p>The % symbol basically cues Python to create a placeholder. Whatever character follows the % (in the string) indicates what sort of type the value put into the placeholder will have. This character is called a conversion type. Once the string has been closed, we need another % that will be followed by the values to insert. In the case of one value, you can just put it there. If you are inserting more than one value, they must be enclosed in a tuple.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span> <span class="p">(</span><span class="s">'There are </span><span class="si">%</span><span class="s">s cats in my </span><span class="si">%</span><span class="s">s'</span> <span class="o">%</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="s">'apartment'</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>There are 13 cats in my apartment
+</code></pre></div></div>
+
+<h4 id="functions-related-to-strings">Functions related to strings</h4>
+
+<ul>
+  <li>count()</li>
+  <li>find()</li>
+  <li>index()</li>
+  <li>join()</li>
+  <li>upper() / lower()</li>
+  <li>lstrip() / rstrip()</li>
+  <li>replace()</li>
+  <li>split()</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Returns the number of character in the string</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s">"Python is fun"</span>
+
+<span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">"n"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Returns the value of first position. If does not exist, return -1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">"n"</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">"k"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
+-1
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Returns the index number</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s">"s"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>8
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Insert string a between 1 and 2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">"12"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1Python is fun2
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Change the characters to uppercase or lowercase</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">a</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PYTHON IS FUN python is fun
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Deleting spaces in the left of right side of the string</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s">"       I  have lots of      space   "</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+
+<span class="c"># Deleting spaces in both side of string</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I  have lots of      space   
+       I  have lots of      space
+I  have lots of      space
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Replace</span>
+<span class="n">a</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"fun"</span><span class="p">,</span><span class="s">"horrible"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'Python is horrible'
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Slicing</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+<span class="c"># Another example</span>
+<span class="n">k</span> <span class="o">=</span> <span class="s">"I/do/not/like/your/shirt"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">"/"</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">"t"</span><span class="p">))</span>
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['Python', 'is', 'fun']
+['I', 'do', 'not', 'like', 'your', 'shirt']
+['I/do/no', '/like/your/shir', '']
+</code></pre></div></div>
+
+<h4 id="encoding">Encoding</h4>
+
+<p>Normal strings in python are stored internally as 8-bit (= 1byte) ASCII. On the other hand, unicode uses 16-bit system (= 2byte) and it can store a more varied set of characters.</p>
+
+<p>Chinese characters and Korean characters cannot be represented in ASCII code.</p>
+
+<p><img src="attachment:encoding1.gif" alt="encoding1.gif" /></p>
+
+<p>UTF-8 strings are stored as 8 bit (= 1byte) just like ASCII, but it works as an extension of ASCII. It can express Korean also.</p>
+
+<p><img src="attachment:encoding%20error.PNG" alt="encoding%20error.PNG" /></p>
+
+<p>Frequent errors that you can encounter</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="s">"안녕"</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>b'\xec\x95\x88\xeb\x85\x95'
+안녕
+</code></pre></div></div>
+
+<p><strong>str – encode () –&gt; bytes – decode() –&gt; str</strong></p>
+
+<h3 id="boolean"><em>Boolean</em></h3>
+
+<p>Boolean is related to logical operators, and takes one of two values only: True or False (True = 1, False = 0)</p>
+
+<p>Default Boolean values follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Values</th>
+      <th style="text-align: left">True of False</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">“python”</td>
+      <td style="text-align: left">True</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">””</td>
+      <td style="text-align: left">False</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">[]</td>
+      <td style="text-align: left">False</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">{}</td>
+      <td style="text-align: left">False</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">()</td>
+      <td style="text-align: left">False</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">False</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">True</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">[1,2,3]</td>
+      <td style="text-align: left">True</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">None</td>
+      <td style="text-align: left">False</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Mostly, empty list,tuple,dictionaries are False. If not, they are True. In terms of numbers, 0 is False while 1 is true.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="mi">0</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>False
+</code></pre></div></div>
+
+<h4 id="and---or----not">and (&amp;) , or ( | ), not</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># And</span>
+<span class="k">print</span><span class="p">(</span><span class="bp">True</span> <span class="o">&amp;</span> <span class="bp">True</span><span class="p">)</span> <span class="c"># True and True</span>
+<span class="k">print</span><span class="p">(</span><span class="bp">True</span> <span class="o">&amp;</span> <span class="bp">False</span><span class="p">)</span> <span class="c"># True and False</span>
+<span class="k">print</span><span class="p">(</span><span class="bp">False</span> <span class="o">&amp;</span> <span class="bp">False</span><span class="p">)</span> <span class="c"># False and False</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"="</span><span class="o">*</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="c"># Or</span>
+<span class="k">print</span><span class="p">(</span><span class="bp">True</span> <span class="o">|</span> <span class="bp">True</span><span class="p">)</span> <span class="c"># True or True</span>
+<span class="k">print</span><span class="p">(</span><span class="bp">True</span> <span class="o">|</span> <span class="bp">False</span><span class="p">)</span> <span class="c"># True or False</span>
+<span class="k">print</span><span class="p">(</span><span class="bp">False</span> <span class="o">|</span> <span class="bp">False</span><span class="p">)</span> <span class="c"># False or False</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"="</span><span class="o">*</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="c"># Not</span>
+<span class="k">print</span><span class="p">(</span><span class="ow">not</span> <span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="ow">not</span> <span class="bp">False</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>True
+False
+False
+==============================
+True
+True
+False
+==============================
+False
+True
+</code></pre></div></div>
+
+<h3 id="lists"><em>Lists</em></h3>
+
+<p>List is an <strong>ordered</strong> collection of objects that can contain any data type. List can be defined using brackets [ ]</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">eiffel_tower</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Paris"</span><span class="p">,</span><span class="s">"France"</span><span class="p">,</span><span class="s">"1889"</span><span class="p">,</span><span class="mf">300.65</span><span class="p">,</span> <span class="mi">324</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>We can access and index the list by using brackets as well. In order to select an individual element, simply type the list name followed by the index of the item you are looking for in braces.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">eiffel_tower</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>300.65
+</code></pre></div></div>
+
+<p>Indexing in Python starts from 00 . If you have a list of length nn , the first element of the list is at index 00 , the second element is at index 11 , and so on and so forth. The final element of the list will be at index n−1n−1 . Be careful! Trying to access a non-existent index will cause an error.</p>
+
+<p>We can see the number of elements in a list by calling the len() function</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">eiffel_tower</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
+</code></pre></div></div>
+
+<p>we can update and change list by accessing an index. List is mutable unlike strings meaning you can change them. However, once a string or other immutable data type has been created, it cannot be directly modified without creating an entirely new object.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">eiffel_tower</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">eiffel_tower</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">320</span>
+<span class="k">print</span><span class="p">(</span><span class="n">eiffel_tower</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>324
+320
+</code></pre></div></div>
+
+<p>If you want to put two lists together, they can be combined with a + symbol.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># You can put list in a list!</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="s">"i"</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">4.30</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s">"harry"</span><span class="p">],</span> <span class="s">"you"</span><span class="p">]</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="s">"hello"</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+
+<span class="n">list3</span> <span class="o">=</span> <span class="n">list1</span> <span class="o">+</span> <span class="n">list2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">list3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['i', 3, 4.3, [1, 2, 'harry'], 'you', 'hello', 4.5, 3.0]
+</code></pre></div></div>
+
+<p><strong>Indexing and Slicing</strong></p>
+
+<p>Lists have similar mechanism of indexing and slicing just as strings do</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">starwars</span> <span class="o">=</span> <span class="p">[</span><span class="s">"may"</span><span class="p">,</span><span class="s">"the"</span><span class="p">,</span><span class="s">"Force"</span><span class="p">,</span><span class="s">"be"</span><span class="p">,</span><span class="s">"with"</span><span class="p">,</span><span class="s">"you"</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">starwars</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">starwars</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">starwars</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['Force', 'be']
+['the', 'Force', 'be', 'with', 'you']
+['may', 'the', 'Force']
+['may', 'the', 'Force', 'be', 'with', 'you']
+</code></pre></div></div>
+
+<p>You can also add a third component to slicing. Instead of simply indicating the first and final parts of your slice, you can specify the step size that you want to take. So instead of taking every single element, you can take every other element.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">confusing</span> <span class="o">=</span> <span class="p">[</span><span class="s">"may"</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s">"the"</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s">"Force"</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s">"be"</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s">"with"</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s">"you"</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">confusing</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">confusing</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">confusing</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">confusing</span><span class="p">[::</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['may', 'the', 'Force', 'be', 'with']
+['may', 'the', 'Force', 'be', 'with', 'you']
+['you', 5, 'with', 4, 'be', 3, 'Force', 2, 'the', 1, 'may']
+['you', 'with', 'be', 'Force', 'the', 'may']
+</code></pre></div></div>
+
+<p><strong>Functions related with lists</strong></p>
+
+<ul>
+  <li>append</li>
+  <li>sort</li>
+  <li>reverse</li>
+  <li>index</li>
+  <li>insert</li>
+  <li>remove</li>
+  <li>pop</li>
+  <li>count</li>
+  <li>extend</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># append</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 4]
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># sort</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="s">"c"</span><span class="p">,</span><span class="s">"d"</span><span class="p">,</span><span class="s">"b"</span><span class="p">,</span><span class="s">"w"</span><span class="p">,</span><span class="s">"f"</span><span class="p">,</span><span class="s">"r"</span><span class="p">]</span>
+<span class="n">b</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 3, 4, 5, 7]
+['b', 'c', 'd', 'f', 'r', 'w']
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="s">"e"</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s">"b"</span><span class="p">,</span><span class="s">"c"</span><span class="p">]</span>
+
+<span class="c"># This does not work</span>
+<span class="n">c</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-122-ff5aa901bedc&gt; in &lt;module&gt;()
+      1 c = [6,4,8,"e",3,"b","c"]
+      2 # This does not work
+----&gt; 3 c.sort()
+
+
+TypeError: unorderable types: str() &lt; int()
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s">"a"</span><span class="p">,</span><span class="s">"c"</span><span class="p">,</span><span class="s">"b"</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="n">a</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['b', 'c', 'a']
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 5, 3, 6, 7]
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 4, 6, 7]
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="n">a</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 4]
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s">"d"</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">"d"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">a</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s">"d"</span><span class="p">,</span><span class="s">"5"</span><span class="p">,</span><span class="s">"d"</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">a</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 4, 5, 'd', '5', 'd', 5]
+</code></pre></div></div>
+
+<h3 id="tuple"><em>Tuple</em></h3>
+
+<p>Tuple is similar to list.
+The difference between tuple and list is that tuple is immutable.
+The data cannot be changed once it has been generated.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">t1</span> <span class="o">=</span> <span class="p">()</span>
+
+<span class="c"># When tuple only has one value, comma must be follwed</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">t2</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">t3</span><span class="p">))</span>
+
+<span class="c"># When assigning variable with tuple, brackets can be skipped </span>
+<span class="n">t4</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">t5</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">t4</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">t5</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;class 'tuple'&gt; &lt;class 'int'&gt;
+&lt;class 'tuple'&gt; &lt;class 'tuple'&gt;
+</code></pre></div></div>
+
+<p>Tuple indexing and slicing is similar to list</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s">"d"</span><span class="p">,</span><span class="s">"d2"</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s">"4"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">tup</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">tup</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>d
+(7, 4, 'd', 'd2', 2, '4')
+</code></pre></div></div>
+
+<p>Tuple addition and multiplication</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tuple1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">tuple2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="n">tuple3</span> <span class="o">=</span> <span class="n">tuple1</span> <span class="o">+</span> <span class="n">tuple2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">tuple3</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">tuple2</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1, 2, 5, 4, 6, 7)
+(4, 6, 7, 4, 6, 7, 4, 6, 7, 4, 6, 7)
+</code></pre></div></div>
+
+<h3 id="dictionary"><em>Dictionary</em></h3>
+
+<p>Dictionary is an important data structure in python. Dictionaries are defined with a combination of curly braces {} and colons : The braces define the beginning and end of a dictionary and the colons indicate key-value pairs. A dictionary is essentially a set of key-value pairs. The key of any entry must be an immutable data type. This makes both strings and tuples candidates. Keys can be both added and deleted.</p>
+
+<p>In the following example, we have a dictionary composed of key-value pairs where the key is a genre of fiction (string) and the value is a list of books (list) within that genre. Since a collection is still considered a single entity, we can use one to collect multiple variables or values into one key-value pair.</p>
+
+<p>Dictionary Example</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Key</th>
+      <th style="text-align: left">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">name</td>
+      <td style="text-align: left">Jake</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">phone</td>
+      <td style="text-align: left">01055999411</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">birth</td>
+      <td style="text-align: left">19941125</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Personal_Info</span> <span class="o">=</span> <span class="p">{</span><span class="s">"name"</span><span class="p">:</span><span class="s">"Jake"</span><span class="p">,</span>
+                 <span class="s">"phone"</span><span class="p">:</span><span class="s">"01055999411"</span><span class="p">,</span>
+                <span class="s">"birth"</span><span class="p">:</span><span class="s">"19941125"</span><span class="p">}</span>
+
+</code></pre></div></div>
+
+<h4 id="dictionary-usage--manipulation">Dictionary Usage &amp; Manipulation</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Idols</span> <span class="o">=</span> <span class="p">{</span><span class="s">"Twice"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Jihyo"</span><span class="p">,</span><span class="s">"Nayeon"</span><span class="p">,</span><span class="s">"Jungyeon"</span><span class="p">,</span><span class="s">"Momo"</span><span class="p">,</span><span class="s">"Sana"</span><span class="p">,</span><span class="s">"Mina"</span><span class="p">,</span><span class="s">"Dahyun"</span><span class="p">,</span><span class="s">"Chaeyoung"</span><span class="p">,</span><span class="s">"Tzuyu"</span><span class="p">],</span> 
+           <span class="s">"Blackpink"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Jisu"</span><span class="p">,</span><span class="s">"Jennie"</span><span class="p">,</span><span class="s">"Rose"</span><span class="p">,</span><span class="s">"Lisa"</span><span class="p">],</span>
+           <span class="s">"Bigbang"</span><span class="p">:</span> <span class="p">[</span><span class="s">"GD"</span><span class="p">,</span><span class="s">"TOP"</span><span class="p">,</span><span class="s">"Taeyang"</span><span class="p">,</span><span class="s">"Daesung"</span><span class="p">,</span><span class="s">"Seungri"</span><span class="p">],</span>
+           <span class="s">"BTS"</span><span class="p">:</span> <span class="p">[</span><span class="s">"RM"</span><span class="p">,</span><span class="s">"Suga"</span><span class="p">,</span><span class="s">"Jin"</span><span class="p">,</span><span class="s">"J-Hope"</span><span class="p">,</span><span class="s">"Jimin"</span><span class="p">,</span><span class="s">"V"</span><span class="p">,</span><span class="s">"Jungkook"</span><span class="p">]}</span>
+</code></pre></div></div>
+
+<p>After defining a dictionary, we can access any values by indicating its key in brackets</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Using Key to retrieve values</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">Idols</span><span class="p">[</span><span class="s">"BTS"</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Idols</span><span class="p">[</span><span class="s">"Twice"</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['RM', 'Suga', 'Jin', 'J-Hope', 'Jimin', 'V', 'Jungkook']
+['Jihyo', 'Nayeon', 'Jungyeon', 'Momo', 'Sana', 'Mina', 'Dahyun', 'Chaeyoung', 'Tzuyu']
+</code></pre></div></div>
+
+<p>Dictionary can be changed by the value associated with a given key</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Idols</span><span class="p">[</span><span class="s">"Bigbang"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"GD"</span><span class="p">,</span><span class="s">"Top"</span><span class="p">,</span><span class="s">"Daesung"</span><span class="p">,</span><span class="s">"Taeyang"</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Idols</span><span class="p">[</span><span class="s">"Bigbang"</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['GD', 'Top', 'Daesung', 'Taeyang']
+</code></pre></div></div>
+
+<h4 id="cautions-when-making-dictionary">Cautions when making dictionary</h4>
+
+<p>Dictionary Key is a unique value.
+This means that same key cannot be used again.
+Also, list cannot be used in the key. This will cause error</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># key cannot be used again (there are two "5"s in the key)</span>
+<span class="n">xdict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">5</span><span class="p">:</span><span class="s">"a"</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="s">"b"</span><span class="p">}</span>
+
+<span class="n">xdict</span> <span class="c"># only returns 5:"b"</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{5: 'b'}
+</code></pre></div></div>
+
+<h4 id="dictionary-related-functions">Dictionary related functions</h4>
+
+<ul>
+  <li>keys</li>
+  <li>values</li>
+  <li>items</li>
+  <li>clear</li>
+  <li>get</li>
+  <li>in</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Retrieve only "keys" from the dictionary</span>
+<span class="n">Idols</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dict_keys(['BTS', 'Twice', 'Bigbang', 'Blackpink'])
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Retrieve only "values" from the dictionary</span>
+<span class="n">Idols</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dict_values([['RM', 'Suga', 'Jin', 'J-Hope', 'Jimin', 'V', 'Jungkook'], ['Jihyo', 'Nayeon', 'Jungyeon', 'Momo', 'Sana', 'Mina', 'Dahyun', 'Chaeyoung', 'Tzuyu'], ['GD', 'Top', 'Daesung', 'Taeyang'], ['Jisu', 'Jennie', 'Rose', 'Lisa']])
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Retrieve "keys" and "values" pairs from the dictionary</span>
+<span class="n">Idols</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dict_items([('BTS', ['RM', 'Suga', 'Jin', 'J-Hope', 'Jimin', 'V', 'Jungkook']), ('Twice', ['Jihyo', 'Nayeon', 'Jungyeon', 'Momo', 'Sana', 'Mina', 'Dahyun', 'Chaeyoung', 'Tzuyu']), ('Bigbang', ['GD', 'Top', 'Daesung', 'Taeyang']), ('Blackpink', ['Jisu', 'Jennie', 'Rose', 'Lisa'])])
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Delete everything in the dictionary</span>
+<span class="n">Personal_Info</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="n">Personal_Info</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{}
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Getting values with key</span>
+<span class="n">Idols</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"Blackpink"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['Jisu', 'Jennie', 'Rose', 'Lisa']
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Checking if key is in dictionary</span>
+<span class="s">"BtoB"</span> <span class="ow">in</span> <span class="n">Idols</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>False
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"Bigbang"</span> <span class="ow">in</span> <span class="n">Idols</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>True
+</code></pre></div></div>
+
+<h3 id="set"><em>Set</em></h3>
+
+<p>Set is made with set() function. Set does not allow repetitive values, and it is unordered.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s1</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s">"This is set"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{1, 2, 3} {'i', 'h', 'T', 't', 's', ' ', 'e'}
+</code></pre></div></div>
+
+<p>Because set does not have orders, it cannot be indexed nor sliced.
+In order to perform this, they have to be converted to tuples or lists.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">l2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">l2</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['i', 'h', 'T', 't', 's', ' ', 'e']
+s
+</code></pre></div></div>
+
+<p>Set is useful when calculating intersection and union</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c"># Intersection</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+
+<span class="c"># union</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">|</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+
+<span class="c"># subtraction</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">a</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{8, 2}
+{8, 2}
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+{1, 5, 9, 7}
+{1, 5, 9, 7}
+</code></pre></div></div>
+
+<p><strong>Set related functions</strong></p>
+
+<ul>
+  <li>add</li>
+  <li>update</li>
+  <li>remove</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Adding a value</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{1, 4, 9, 6, 7}
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Adding multiple values</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">s2</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{1, 3, 4, 5, 6, 8}
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Removing a value</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{8, 1, 5}
+</code></pre></div></div>
+
+
+    <br/>
+    <br/>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="//2018/09/26/nowgeun-blog.html">
         Nowgeun's Blog
       </a>

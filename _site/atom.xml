@@ -4,13 +4,58 @@
  <title>Nowgeun's Blog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2018-10-25T20:52:34+09:00</updated>
+ <updated>2018-11-01T15:31:59+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Jaekeun Lee</name>
    <email>agdal1125@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Agenda Setting</title>
+   <link href="http://localhost:4000/2018/10/13/AgendaSetting.html"/>
+   <updated>2018-10-13T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2018/10/13/AgendaSetting</id>
+   <content type="html">&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;agenda-setting&quot;&gt;Agenda Setting&lt;/h2&gt;
+
+&lt;p&gt;Agenda setting is a theory that suggests that mass media (newspaper, broadcasts, televisions) are influencing the public of “what to think about”. Simply saying, if a news item is frequently addressed, the public will perceive it more significant and important.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;”&quot;”The press may not be successful much of the time in telling people what to think, but it is stunningly successful in telling its readers what to think about””” - McCombs and Shaw (1972)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;p&gt;There is a scene in a famous movie &lt;strong&gt;&lt;em&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1375666/&quot;&gt;Inception (2010)&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt; by Christopher Nolan that is quite relevant to agenda setting:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Saito: “If you can steal an idea from someone’s mind, why can’t you plant one there instead?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Arthur: “Okay. Here is me planting an idea in your head. I say to you, don’t think about elephants. What are you thinking about?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Saito: “Elephants…?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Arthur: “Right, but it is not your idea. The dreamer can always remember the genesis of the idea. True inspiration is impossible to fake.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;p&gt;Forcing and shaping how people think is complicated. Belief, faith and perspective are formed by external variables such as different personal experience and environment and person’s innate nature. In fact, these are what we refer to as bias. Influencing and changing people &lt;strong&gt;&quot;”what to think”“&lt;/strong&gt; is a difficult matter. However, “what to think &lt;strong&gt;about&lt;/strong&gt;” is relatively easy. All you have to say is “think about elephants”. Regardless of people’s perspectives, background or personalities, for a while, people will have elephants in their mind.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Spearman Correlation</title>

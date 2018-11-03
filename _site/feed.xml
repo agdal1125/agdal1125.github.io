@@ -5,7 +5,55 @@
         <description>A blog of Jaekeun Lee for recording life and keeping track of studies, interests and experiences</description>
         <link>http://localhost:4000</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Fri, 12 Oct 2018 00:00:00 +0900</lastBuildDate>
+        <lastBuildDate>Sat, 13 Oct 2018 00:00:00 +0900</lastBuildDate>
+        
+        <item>
+            <title>Agenda Setting</title>
+            
+            
+            <description>&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;agenda-setting&quot;&gt;Agenda Setting&lt;/h2&gt;
+
+&lt;p&gt;Agenda setting is a theory that suggests that mass media (newspaper, broadcasts, televisions) are influencing the public of “what to think about”. Simply saying, if a news item is frequently addressed, the public will perceive it more significant and important.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;”&quot;”The press may not be successful much of the time in telling people what to think, but it is stunningly successful in telling its readers what to think about””” - McCombs and Shaw (1972)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;p&gt;There is a scene in a famous movie &lt;strong&gt;&lt;em&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1375666/&quot;&gt;Inception (2010)&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt; by Christopher Nolan that is quite relevant to agenda setting:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Saito: “If you can steal an idea from someone’s mind, why can’t you plant one there instead?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Arthur: “Okay. Here is me planting an idea in your head. I say to you, don’t think about elephants. What are you thinking about?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Saito: “Elephants…?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Arthur: “Right, but it is not your idea. The dreamer can always remember the genesis of the idea. True inspiration is impossible to fake.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt; 
+ &lt;/p&gt;
+
+&lt;p&gt;Forcing and shaping how people think is complicated. Belief, faith and perspective are formed by external variables such as different personal experience and environment and person’s innate nature. In fact, these are what we refer to as bias. Influencing and changing people &lt;strong&gt;&quot;”what to think”“&lt;/strong&gt; is a difficult matter. However, “what to think &lt;strong&gt;about&lt;/strong&gt;” is relatively easy. All you have to say is “think about elephants”. Regardless of people’s perspectives, background or personalities, for a while, people will have elephants in their mind.&lt;/p&gt;
+</description>
+            
+            <pubDate>Sat, 13 Oct 2018 00:00:00 +0900</pubDate>
+            <link>http://localhost:4000/2018/10/13/AgendaSetting.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2018/10/13/AgendaSetting.html</guid>
+        </item>
         
         <item>
             <title>Spearman Correlation</title>
@@ -700,19 +748,6 @@ Unlike, unpaired t-test, paired t-test is used to compare sample menas of two &l
             <pubDate>Sat, 29 Sep 2018 00:00:00 +0900</pubDate>
             <link>http://localhost:4000/2018/09/29/python2.html</link>
             <guid isPermaLink="true">http://localhost:4000/2018/09/29/python2.html</guid>
-        </item>
-        
-        <item>
-            <title>Python Basics I</title>
-            
-            
-            <description>&lt;h1 id=&quot;chapter-1---python-basics-i&quot;&gt;Chapter 1 - Python Basics I&lt;/h1&gt;
-
-</description>
-            
-            <pubDate>Fri, 28 Sep 2018 00:00:00 +0900</pubDate>
-            <link>http://localhost:4000/2018/09/28/python1.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2018/09/28/python1.html</guid>
         </item>
         
     </channel>
