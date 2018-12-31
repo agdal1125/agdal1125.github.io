@@ -47,8 +47,9 @@ Business Analytics; Statistical Prediction
 
 ### Projects
 
-* YONSEI TAD CAPSTONE PROJECT
+* YONSEI TAD CAPSTONE PROJECT - [COSMOS](https://cosmos-4u.herokuapp.com)
     - (September.2018 - Present)
+    - _Developed cosmetic product recommendation platform using rgb color code similarity_
 
 
 * YONSEI UIC FAQ CHATBOT DEVELOPMENT COMPETITION 
