@@ -67,7 +67,7 @@ Business Analytics; Statistical Prediction
 ### Experience
 
 * RESIDENTIAL ASSISTANT 
-    - (October. 2017 – Present) 
+    - (February. 2018 – December. 2018) 
     - _Residential assistant at Allen International House of Yonsei International Campus_
 
 
