@@ -15,7 +15,7 @@ Among the  ways of measuring the performance of prediction by n machine learning
 
 The Confusion Matrix is a type of __contingency table__(or Pivot Table), where data are presented in cross tabulated format. It displays the interrelation betwee two variables and often used to find interactions between those variables.
 
-### True Positive, True Negative, False Positive, False Negative
+## True Positive, True Negative, False Positive, False Negative
 
 If you are making a prediction about a binary case, four types of results can be expected:
 <br>
@@ -32,43 +32,46 @@ To facilitate understanding or memorizing the concepts above, the naming of TN, 
 - If the prediction is __right__, it is __True__
 - If the prediction is __0__, it is __Negative__
 - And if the prediction is __0__ and __right__, it is __True Negative__
+
+<br>
+<br>
 <br>
 
-### Terminology and Measurements from Confusion Matrix
+## Terminology and Measurements from Confusion Matrix
 
-#### Recall=Sensitivity=Hit Rate=True Positive Rate(TPR)
+### Recall=Sensitivity=Hit Rate=True Positive Rate(TPR)
 Summarizes how well the model predicts or classifies the positive(1) data. The value is calculated by dividing the __whole actual positive__ data by __correctly predicted positive__ data. (True Positive)
 
 <br>
 
-#### Specificity=Selectivity=True Negative Rate(TNR)
+### Specificity=Selectivity=True Negative Rate(TNR)
 Specificity is similar to Recall or Sensitivity, but retrieving the rate of __correctly predicted negative__ data (True Negative) to the __whole actual negative__ data.
 
 <br>
 
-#### Fallout=False Positive Rate(FPR)
+### Fallout=False Positive Rate(FPR)
 This concept refers to falsely predicted rate of predicting __actual positive__ data __negatively__.
 
 <br>
 
-#### Miss Rate=False Negative Rate(FNR)
+### Miss Rate=False Negative Rate(FNR)
 This concept refers to falsely predicted rate of predicting __actual negative__ data __positively__.
 
 <br>
 
-#### Precision=Positive Predictive Value(PPV)
+### Precision=Positive Predictive Value(PPV)
 Precision is about being precise with the prediction. It tells how __likely__ the __predictive positive__ will be __correct__.
 
 <br>
 
-#### Accuracy(ACC)
+### Accuracy(ACC)
 Percentage of getting __the predictions right__. This summarizes how well (accurate) the model predicts or classifies.
 <br>
 <br>
 
 ## Performance Metrics 
 
-#### R.O.C Curve (Receiver Operating Characteristics)
+### R.O.C Curve (Receiver Operating Characteristics)
 - The ROC curve has Specificity(False Positive Rate) and Sensitivity(True Positive Rate) as the two axis.
 
 - The higher the curve is above y=x graph, the better the performance of a model is.
@@ -79,13 +82,13 @@ Percentage of getting __the predictions right__. This summarizes how well (accur
 
 <br>
 
-#### Precision Recall Plot (PR Graph)
-
-<br>
-#### F1-Score
+### Precision Recall Plot (PR Graph)
 
 <br>
 
+### F1-Score
+
+<br>
 <br><br>
 ## Python Code Example
 
