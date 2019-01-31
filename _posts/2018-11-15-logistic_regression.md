@@ -9,7 +9,6 @@ tags:
 
 mathjax: true
 ---
-# Logistic Regression
 
 - Logistic Model is a statistical model that uses a logistic function to classify dependent variablea.
 
@@ -42,6 +41,8 @@ $$ logit(p)= ln\frac{p}{1-p}$$
 Using the logit function, the linear model can be transformed as following equation:
 
 $$ logit(p)= ln\frac{p}{1-p}= ax + b $$
+<br>
 $$ \frac{1-p}{p}= \frac{1}{e^{ax+b}} $$
+<br>
 $$  p= \frac{e^{ax+b}}{e^{ax+b}+1} $$
 

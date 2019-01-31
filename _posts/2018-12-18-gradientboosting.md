@@ -9,8 +9,6 @@ tags:
 mathjax: true
 ---
 
-# Concept of Gradient Boosting
-
 ## Boosting
 
 In Machine Learning, Boosting refers to creating a stronger and more accurate learner by combining weak and simple learners. In other words, it is a technique of producing a stronger model by ensembling weak models. The principle that lies behind this concept is that integration of models may complement problems that individual models face.

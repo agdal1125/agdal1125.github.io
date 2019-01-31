@@ -10,7 +10,6 @@ tags:
 
 mathjax: true
 ---
-# Confusion Matrix
 
 Among the  ways of measuring the performance of prediction by n machine learning or statistical analysis, there is __Confusion Matrix__(or Error Matrix).
 
@@ -60,16 +59,19 @@ Precision is about being precise with the prediction. It tells how __likely__ th
 Percentage of getting __the predictions right__. This summarizes how well (accurate) the model predicts or classifies.
 <br>
 <br>
-##Performance Metrics 
+
+## Performance Metrics 
 
 #### R.O.C Curve (Receiver Operating Characteristics)
-The ROC curve has Specificity(False Positive Rate) and Sensitivity(True Positive Rate) as the two axis.
+- The ROC curve has Specificity(False Positive Rate) and Sensitivity(True Positive Rate) as the two axis.
 
-The higher the curve is above y=x graph, the better the performance of a model is.
+- The higher the curve is above y=x graph, the better the performance of a model is.
 
-However, ROC is an illustrated graph of FP and TP. And it is difficult for comparing models in some cases where the difference is not intuitively noticable. Thus, __AUC__ (Area under Curve) is used as a parameter. 
+- However, ROC is an illustrated graph of FP and TP. And it is difficult for comparing models in some cases where the difference is not intuitively noticable. Thus, __AUC__ (Area under Curve) is used as a parameter. 
 
-The ROC AUC value is area of the ROC curve. The highest value is 1, and the better the model, the higher the AUCvalue is.
+- The ROC AUC value is area of the ROC curve. The highest value is 1, and the better the model, the higher the AUC value is.
+
+<br>
 
 #### Precision Recall Plot (PR Graph)
 
