@@ -40,21 +40,27 @@ To facilitate understanding or memorizing the concepts above, the naming of TN, 
 Summarizes how well the model predicts or classifies the positive(1) data. The value is calculated by dividing the __whole actual positive__ data by __correctly predicted positive__ data. (True Positive)
 
 <br>
+
 #### Specificity=Selectivity=True Negative Rate(TNR)
 Specificity is similar to Recall or Sensitivity, but retrieving the rate of __correctly predicted negative__ data (True Negative) to the __whole actual negative__ data.
 
 <br>
+
 #### Fallout=False Positive Rate(FPR)
 This concept refers to falsely predicted rate of predicting __actual positive__ data __negatively__.
+
 <br>
+
 #### Miss Rate=False Negative Rate(FNR)
 This concept refers to falsely predicted rate of predicting __actual negative__ data __positively__.
 
 <br>
+
 #### Precision=Positive Predictive Value(PPV)
 Precision is about being precise with the prediction. It tells how __likely__ the __predictive positive__ will be __correct__.
 
 <br>
+
 #### Accuracy(ACC)
 Percentage of getting __the predictions right__. This summarizes how well (accurate) the model predicts or classifies.
 <br>
