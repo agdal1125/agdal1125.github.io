@@ -101,7 +101,7 @@ Percentage of getting __the predictions right__. This summarizes how well (accur
 
 
 
-$ F_{\beta} = \frac{(1+\beta^2)(Precision * Recall)}{(\beta^2*Precision*Recall}$
+$$ F_{\beta} = \frac{(1+\beta^2)(Precision * Recall)}{(\beta^2*Precision*Recall} $$
 
 
 
