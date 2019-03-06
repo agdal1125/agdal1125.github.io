@@ -74,6 +74,11 @@ Percentage of getting __the predictions right__. This summarizes how well (accur
 ## Performance Metrics 
 
 ### R.O.C Curve (Receiver Operating Characteristics)
+
+<img src="http://deparkes.co.uk/wp-content/uploads/2018/02/roc_curve_1.png">
+
+<br>
+
 - The ROC curve has Specificity(False Positive Rate) and Sensitivity(True Positive Rate) as the two axis.
 
 - The higher the curve is above y=x graph, the better the performance of a model is.
@@ -101,7 +106,7 @@ Percentage of getting __the predictions right__. This summarizes how well (accur
 
 
 
-$$ F_{\beta} = \frac{(1+\beta^2)(Precision * Recall)}{(\beta^2*Precision*Recall} $$
+$$ F_{\beta} = \frac{(1+\beta^2)(Precision * Recall)}{(\beta^2*Precision*Recall)} $$
 
 
 
