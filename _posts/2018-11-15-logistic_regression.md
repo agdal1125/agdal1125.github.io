@@ -35,7 +35,9 @@ Logit function, or log-odds is __the logarithm__ of the __odds__(relative probab
 $$ odds : \frac{p}{1-p}$$
 p is the probability that the event will happen. Thus, the logit function and inverse logit function is:
 
-$$ logit(p)= ln\frac{p}{1-p}$$
+$$ logit(p)= ln\frac{p}{1-p}​$$
+
+
 
 ### Logistic Function
 Using the logit function, the linear model can be transformed as following equation:
@@ -45,4 +47,10 @@ $$ logit(p)= ln\frac{p}{1-p}= ax + b $$
 $$ \frac{1-p}{p}= \frac{1}{e^{ax+b}} $$
 <br>
 $$  p= \frac{e^{ax+b}}{e^{ax+b}+1} $$
+
+
+
+```python
+from sklearn.
+```
 

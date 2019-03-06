@@ -35,7 +35,8 @@ To facilitate understanding or memorizing the concepts above, the naming of TN, 
 
 <br>
 <br>
-<br>
+
+---
 
 ## Terminology and Measurements from Confusion Matrix
 
@@ -69,6 +70,7 @@ Percentage of getting __the predictions right__. This summarizes how well (accur
 <br>
 <br>
 
+---
 ## Performance Metrics 
 
 ### R.O.C Curve (Receiver Operating Characteristics)
@@ -84,12 +86,32 @@ Percentage of getting __the predictions right__. This summarizes how well (accur
 
 ### Precision Recall Plot (PR Graph)
 
+<img src="https://classeval.files.wordpress.com/2015/06/evaluation-measures-for-precision-recall.png?w=920&h=564">
+
 <br>
 
-### F1-Score
+- Precision-Recall plot, as its name presents, uses precision and recall to evaluate model. 
+- Generally, it uses recall as horizontal axis and precision on the vertical axis in 2-Dimensional plotting.
+- The PR Graph is used when the distribution of labels used in classification is highly unbalanced; when the number of positive cases overwhelms the number of negative cases.
+- Just like the ROC curve, it uses **AUC** as a parameter to evaluate the model.
+
+<br>
+
+### F1-Score (F score when $\beta$=1 )
+
+
+
+$ F_{\beta} = \frac{(1+\beta^2)(Precision * Recall)}{(\beta^2*Precision*Recall}$
+
+
+
+- In order to measure performance of a model with AUC of ROC or PR, many calculations are required in various throughputs. 
+- F1 Score is used to express the performance of a model in a single number. 
+- When $\beta$ = 1, the F score is called F1 Score and it is a widely used metric for model evaluation.
 
 <br>
 <br><br>
+
 ## Python Code Example
 
 ```python
