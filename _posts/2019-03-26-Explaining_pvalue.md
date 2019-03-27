@@ -37,7 +37,7 @@ In fact, many people (even scientists and researchers) [misinterpret the concept
 <br>
 
 <img src="https://media.nature.com/w800/magazine-assets/d41586-019-00857-9/d41586-019-00857-9_16551624.jpg"> 
-<p align="right"><font size=2.5px> source: "https://www.nature.com/articles/d41586-019-00857-9" </font></p>
+<p align="right" style = "font-size: 11px">source: https://www.nature.com/articles/d41586-019-00857-9</p>
 
 <br>
 
