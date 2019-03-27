@@ -39,8 +39,6 @@ In fact, many people (even scientists and researchers) [misinterpret the concept
 <img src="https://media.nature.com/w800/magazine-assets/d41586-019-00857-9/d41586-019-00857-9_16551624.jpg" width=800> 
 
 
-<p align="right"><font size=2.5px> source: "https://www.nature.com/articles/d41586-019-00857-9" </font></p>
-
 <br>
 
 In this sense, statisticians should be able to double check whether their understanding is correct or not. The best way to do this is trying to teach the concept to other people. Tutoring or teaching can be a way of developing one's own understanding and establishing confidence to their knowledge. This is probably why the professor suggested students to try to explain p-value to their grandmother. 
