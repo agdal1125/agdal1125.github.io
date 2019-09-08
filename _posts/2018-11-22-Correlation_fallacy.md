@@ -64,6 +64,8 @@ Also, try to think about the images below.
 
 <img src="/assets/images/egg_yes.png" width="700">
 
+<br>
+
 <img src="/assets/images/egg_no.png" width="700">
 
 &nbsp;&nbsp;
@@ -74,7 +76,7 @@ Also, try to think about the images below.
 
 Base rate fallacy is another logical error that we are often exposed to. We are prone to jumping into conclusions without thinking about the whole picture. This happens when we make irrational decisions based on our bias or belief, in favor of statistical probability or ignore general  . 
 
-**Base rate** is the probability of event also known as prior probabilities in Bayesian term. In an easy way to put this, it is "a percentage of a population that demonstrates some characteristics[^1]". Obviously, when base rate is ignored or neglected, fallacy occurs. Here's an example:
+**Base rate** is the probability of event also known as prior probabilities in Bayesian term. In an easy way to put this, it is "a percentage of a population that demonstrates some characteristics"<sup>1</sup>. Obviously, when base rate is ignored or neglected, fallacy occurs. Here's an example:
 
 <br>
 
@@ -97,7 +99,11 @@ In fact, 1000 students will be examined. Among these students **only 5 students 
 
 Now we all know that this is not surprising if we think of the base rate; super smart women are more likely to encounter people dumber than them. 
 
+<br>
 
+<br>
+
+References
 
 <sup>1</sup> https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-79061-9_289
 
