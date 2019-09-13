@@ -13,8 +13,8 @@ plugins:
 pages_list: 
   About Me: '/about'
   Blog: '/blog'
-  Projects: '/projects'
   Contact: '/contact'
+  Projects: '/projects'
   Tags: '/tags'
 
 
