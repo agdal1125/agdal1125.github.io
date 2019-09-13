@@ -3,7 +3,7 @@ layout: page
 title: About Me
 ---
 
-* * * 
+* * *
 
 ### Basic Profile
 &nbsp;
@@ -11,13 +11,13 @@ title: About Me
 - **Name** : Jaekeun Lee
 - **Birth** : 1994-11-25
 - **Gender** : Male
-- **Location** : Seoul, Korea
+- **Address** : 2111 Lower Mall, Vancouver, BC, Canada
 
 &nbsp;
 
 Download my [CV]({{ "/assets/Jaekeun Lee_CV.pdf" | absolute_url }})
 
-* * * 
+* * *
 
 ### Research Interest
 <p class="message">
@@ -32,10 +32,19 @@ Business Analytics; Statistical Prediction
 
 ### Education
 
-* [YONSEI UNIVERSITY](https://yonsei.ac.kr), [Creative Technology Management](https://www.yonseictm.org/) 
-    - (March. 2013 – Present)
-    - _Bachelor of Science_
+- [UNIVERSITY OF BRITISH COLUMBIA](https://masterdatascience.ubc.ca/), [Master of Data Science Vancouver](https://www.yonseictm.org/) 
 
+  - (September. 2019 – Present)
+
+    
+
+* [YONSEI UNIVERSITY](https://yonsei.ac.kr), [Creative Technology Management](https://www.yonseictm.org/) 
+    - (March. 2013 – 2019)
+    
+- _Bachelor of Science_
+    
+      
+    
 * [ANYANG FOREIGN LANGUAGE HIGHSCHOOL](http://www.anyang-fl.hs.kr)
     - (March. 2010 – February. 2013)
     - _English Major_
@@ -65,6 +74,16 @@ Business Analytics; Statistical Prediction
 * * *
 
 ### Experience
+
+- CREVASSE A.I PART-TIME DEVELOPER
+  - (April.2019 – May.2019)
+  - Developed and tuned info-GAN python modules for image generation
+
+- DELOITTE CONSULTING KOREA, DATA SCIENCE INTERN
+  - (January. 2019 – February. 2019)
+  - Performed Exploratory Data Analysis with *SQL, Python, R*
+  - Created dictionary for lemmatization and pos-tagging
+  - Run and tested models for automation of Insurance Underwriting QA system
 
 * RESIDENTIAL ASSISTANT 
     - (February. 2018 – December. 2018) 
