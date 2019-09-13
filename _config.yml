@@ -12,7 +12,7 @@ plugins:
 # Page
 pages_list: 
   About Me: '/about'
-  Blog: '/archive'
+  Blog: '/blog'
   Projects: '/projects'
   Contact: '/contact'
   Tags: '/tags'
