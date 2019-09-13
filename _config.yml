@@ -14,6 +14,7 @@ pages_list:
   About Me: '/about'
   Archive: '/archive'
   Contact: '/contact'
+  Projects: '/projects'
   Tags: '/tags'
 
 
