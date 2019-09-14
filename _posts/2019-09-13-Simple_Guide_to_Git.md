@@ -7,8 +7,6 @@ tags:
 mathjax: true
 ---
 
-<br>
-
 ### Git ?
 
 Let's assume that you have to submit a report as a group for your science class. In this case, you would want to split the works. Different roles and responsibilities can be assigned to each person. Some might focus on doing research and gathering information, some can just write with the collected information and others might do the presentation.
@@ -60,8 +58,8 @@ And the diagram below explains the basic flows of git:
 
 <br>
 
-<p align="middle">
-  <img src="http://pismute.github.io/whygitisbetter/images/local-remote.png" width="800"><font align="center" size=2>source: https://pismute.github.io/whygitisbetter</font></p>
+<p align="middle" style="font-size: 11px">
+  <img src="http://pismute.github.io/whygitisbetter/images/local-remote.png" width="800">source: https://pismute.github.io/whygitisbetter</p>
 
 <br>
 
@@ -88,12 +86,13 @@ Step 2 seems more simpler, but if you have an existing project that you would li
 
 1. First, you need a remote repository on Github to store your project. Sign in to [Github](https://github.com), and go to repositories tab. (should be easy to find) Then, you will see this in your screen:
 
-<img src="/assets/images/git_create_repo.png" width=800>
+   <img src="/assets/images/git_create_repo.png" width=800>
 
 2. Fill in the repository name, description of your project and create the repository. 
    (**DO NOT CHECK **Initialize this repo with README)
 
 3. Once you create your remote repository, you should be able to see a url that looks like this:
+
    <img src="/assets/images/git_ssh.png" width=500>
 
    Remember this url because you need this to set your location of remote repository!
@@ -127,7 +126,7 @@ The process above is more complicated than this option. If you want to create a 
 
 1. First, you need a remote repository on Github to store your project. Sign in to [Github](https://github.com), and go to repositories tab. (should be easy to find) Then, you will see this in your screen:
 
-<img src="/assets/images/git_create_repo.png" width=800>
+   <img src="/assets/images/git_create_repo.png" width=800>
 
 2. Fill in the repository name, description of your project and create the repository. 
    (**CHECK **Initialize this repo with README)
@@ -148,4 +147,16 @@ The process above is more complicated than this option. If you want to create a 
 
 
 
+
+
+
+
+
+
+
+Resources & References:
+
+- https://rogerdudler.github.io/git-guide/index.html
+- https://kbroman.org/github_tutorial/pages/init.html
+- https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
 

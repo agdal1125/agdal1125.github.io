@@ -46,7 +46,6 @@ The following correlations above are all fallacious. More logical reason or caus
 Likewise, high correlation fools us to think that there is an actual casual relationship between the two variables. Here are some types of correlation mistakes:
 
 <p></p>
-
 1. **Spurious Correlation**
 
    All the examples that we have talked about above, is spurious correlation. This is a deceptive association due to some other variables in between them. Season, size of the city, money were the hidden key variables in these cases. 
