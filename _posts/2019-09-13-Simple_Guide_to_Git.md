@@ -188,7 +188,7 @@ $ git pull origin master
 
 Here's a simple explanation. Pulling does more than fetching. It "fetches" and then "merges" to update your repository. Pulling "automatically merges the commits without letting you review them first". If you are not involved in managing branches, pulling is recommended. 
 
-<img src="https://blog.osteele.com/2008/05/my-git-workflow/" width="800">
+<img src="https://images.osteele.com/2008/git-transport.png" width="600">
 
 <br>
 
