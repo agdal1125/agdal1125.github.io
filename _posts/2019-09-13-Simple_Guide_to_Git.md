@@ -50,9 +50,9 @@ When it comes to a collaborative work and especially when the size of group gets
 
 In order to use git, you need to understand how git works. Here are some new words that you should get used to:
 
-- Repository (Local/Remote)
+- Local Repository 
+- Remote Repository
 - Staging Area
-- Branch
 
 And the diagram below explains the basic flows of git:
 
@@ -78,11 +78,11 @@ There are two ways to create a repository:
 1. Create a repository on your local area (your computer) and initialize git. Then create a new repository on Github and use git commands to set the location of remote repository that you created on Github
 2. Create a repository on remote area (through Github.com) and *git clone* to local area 
 
-Step 2 seems more simpler, but if you have an existing project that you would like to upload, first way would be more convenient. 
+Step 2 seems simpler, but if you have an existing project that you would like to upload, first way would be more convenient. 
 
 <br>
 
-#### 1. Uploading Existing Projects
+#### Method 1. Uploading Existing Projects
 
 1. First, you need a remote repository on Github to store your project. Sign in to [Github](https://github.com), and go to repositories tab. (should be easy to find) Then, you will see this in your screen:
 
@@ -93,25 +93,30 @@ Step 2 seems more simpler, but if you have an existing project that you would li
 
 3. Once you create your remote repository, you should be able to see a url that looks like this:
 
-<img src="/assets/images/git_ssh.png" width="500">
+<img src="/assets/images/git_ssh.png" width="800">
 
 Remember this url because you need this to set your location of remote repository!
 
 4. Finally, you are ready to upload your files from your local repository to remote repository. Just follow the command lines below:
 
    ```shell
+   # Change directory to the location of your project
    > cd /Desktop/your_project_directory/ 
    
-   > git init                        # Initiate git
+   # Initiate git
+   > git init                        
    
-   > git add .                       # Add all the files in your current directory (staging)
-                   
-   > git commit -m "Write any Comments or Notes"   						 # commit the files 
+   # Add all the files in your current directory (staging)
+   > git add .                       
+          
+   # commit the files 
+   > git commit -m "Write any Comments or Notes"   						
    
-   > git remote add origin git@github.com:username/project.git  # locate of 
-   																														 # your remote repository
+   # Locate your remote repository
+   > git remote add origin git@github.com:username/project.git  
    
-   > git push -u origin master       # pushes the changes in local repo to remote repo
+   # pushes the changes in local repo to remote repo
+   > git push -u origin master      
    ```
 
    
@@ -120,7 +125,7 @@ If you followed the steps successfully, you can go back to Github and check that
 
 <br>
 
-#### 2. Creating a New Project
+#### Method 2. Creating a New Project
 
 The process above is more complicated than this option. If you want to create a new project, you can create a remote repository and copy (clone/download) it into your local machine:
 
@@ -134,7 +139,11 @@ The process above is more complicated than this option. If you want to create a 
 3. Type in the commands below:
 
    ```shell
-   > cd /Desktop/My_projects/Project_1/ # Change directory to where your project should be
+   # Change directory to where your project should be
+   > cd /Desktop/My_projects/Project_1/
+   
+   # Clone remote repo into your local machine.
+   # This becomes your local repo
    > git clone git@github.com:username/project.git
    ```
 
@@ -142,13 +151,32 @@ The process above is more complicated than this option. If you want to create a 
 
 <br>
 
-### Add/Commit
+### Updating Your Work
+
+If you made changes to your project and want them updated to your remote repository, only three lines of codes are required:
+
+```shell
+# Add all the files in your current directory (staging)
+> git add .                       
+       
+# commit the files 
+> git commit -m "Write any Comments or Notes"   						
+
+# pushes the changes in local repo to remote repo
+> git push -u origin master      
+```
 
 
 
+<br>
 
+### Github Cheatsheet
 
+FYI, Here's a cheatsheet of git command lines! 
 
+<img src="/assets/images/github_cheatsheet.png" width="800">
+
+<br>
 
 
 
