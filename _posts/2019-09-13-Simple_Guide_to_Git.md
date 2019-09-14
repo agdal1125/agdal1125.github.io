@@ -86,14 +86,14 @@ Step 2 seems more simpler, but if you have an existing project that you would li
 
 1. First, you need a remote repository on Github to store your project. Sign in to [Github](https://github.com), and go to repositories tab. (should be easy to find) Then, you will see this in your screen:
 
-<img src="/assets/images/git_create_repo.png" width=800>
+<img src="/assets/images/git_create_repo.png" width="800">
 
 2. Fill in the repository name, description of your project and create the repository. 
    (**DO NOT CHECK **Initialize this repo with README)
 
 3. Once you create your remote repository, you should be able to see a url that looks like this:
 
-<img src="/assets/images/git_ssh.png" width=500>
+<img src="/assets/images/git_ssh.png" width="500">
 
 Remember this url because you need this to set your location of remote repository!
 
@@ -126,7 +126,7 @@ The process above is more complicated than this option. If you want to create a 
 
 1. First, you need a remote repository on Github to store your project. Sign in to [Github](https://github.com), and go to repositories tab. (should be easy to find) Then, you will see this in your screen:
 
-<img src="/assets/images/git_create_repo.png" width=800>
+<img src="/assets/images/git_create_repo.png" width="800">
 
 2. Fill in the repository name, description of your project and create the repository. 
    (**CHECK **Initialize this repo with README)
