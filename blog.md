@@ -6,7 +6,9 @@ title: Blog
 
 
 
-## Anything that I studied or found interesting comes up here!
+### Anything that I studied or found interesting is here!
+
+## 
 
 
 
