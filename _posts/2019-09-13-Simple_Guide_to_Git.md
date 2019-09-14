@@ -93,7 +93,7 @@ Step 2 seems more simpler, but if you have an existing project that you would li
 
 3. Once you create your remote repository, you should be able to see a url that looks like this:
 
-   <img src="/assets/images/git_ssh.png" width=500>
+   <img src=/assets/images/git_ssh.png" width=500>
 
    Remember this url because you need this to set your location of remote repository!
 
