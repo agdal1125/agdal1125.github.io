@@ -14,7 +14,7 @@ pages_list:
   About Me: '/about'
   Blog: '/blog'
   Contact: '/contact'
-  Projects: '/projects'
+  Projects: '/my-projects'
   Tags: '/tags'
 
 
