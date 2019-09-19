@@ -8,8 +8,6 @@ title: Blog
 
 ### Anything that I studied or found interesting is here!
 
-## 
-
 
 
 {% for post in site.posts %}
