@@ -1,6 +1,6 @@
 ---
  layout: post
-title: The Curse of High Dimensionality
+title: The Curse of High Dimension
 tags:
 - Dimension
 - Analysis

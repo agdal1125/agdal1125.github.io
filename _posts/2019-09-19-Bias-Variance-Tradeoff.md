@@ -5,6 +5,8 @@ tags:
 - Bias
 - Variance
 - Machine Learning
+- Overfitting
+- Underfitting
 mathjax: true
 ---
 
@@ -126,6 +128,7 @@ Now, here's the thing. We know that squared values are always non-negative, and 
 **TL;DR:**
 
 **- Increasing bias will decrease variance**
+
 **- Increasing variance will decrease bias**
 
 <br>
