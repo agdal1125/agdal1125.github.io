@@ -40,8 +40,8 @@ Every machine learning model would aim for low bias and low variance. We want al
 
 
 
-| Choose 2                                                     |                         Consequences                         |
-| ------------------------------------------------------------ | :----------------------------------------------------------: |
+|                           Choose 2                           |                         Consequences                         |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
 | <img src="https://pics.me.me/social-l-life-good-grades-choose-two-enough-sleep-choose-2239262.png" width="300" align="left" vertical-align="bottom"> | <img src="http://s3.favim.com/orig/45/grade-lol-sleep-social-life-troll-Favim.com-408205.jpg" width="300" align="right" vertical-align="bottom"> |
 | [source](https://pics.me.me/social-l-life-good-grades-choose-two-enough-sleep-choose-2239262.png) | [source](http://s3.favim.com/orig/45/grade-lol-sleep-social-life-troll-Favim.com-408205.jpg) |
 
