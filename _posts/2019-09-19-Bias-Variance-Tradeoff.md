@@ -43,10 +43,11 @@ Every machine learning model would aim for low bias and low variance. We want al
 | Choose 2                                                     |                         Consequences                         |
 | ------------------------------------------------------------ | :----------------------------------------------------------: |
 | <img src="https://pics.me.me/social-l-life-good-grades-choose-two-enough-sleep-choose-2239262.png" width="300" align="left" vertical-align="bottom"> | <img src="http://s3.favim.com/orig/45/grade-lol-sleep-social-life-troll-Favim.com-408205.jpg" width="300" align="right" vertical-align="bottom"> |
-| <p style="font-size:6pt; text-align:center;"> source: https://pics.me.me/social-l-life-good-grades-choose-two-enough-sleep-choose-2239262.png </p> | <p style="font-size:6pt; text-align:center;"> source: http://s3.favim.com/orig/45/grade-lol-sleep-social-life-troll-Favim.com-408205.jpg </p> |
-
+| [source](https://pics.me.me/social-l-life-good-grades-choose-two-enough-sleep-choose-2239262.png) | [source](http://s3.favim.com/orig/45/grade-lol-sleep-social-life-troll-Favim.com-408205.jpg) |
 
 &nbsp;
+
+
 
 At some point of life, you might have seen this popular meme. Although it assumes that the three options have binary values (either you can have it or not) in a mutually exclusive way, it teaches the lesson that you can't always have everything. In economics, this problem can be associated to opportunity cost, where "the loss of potential gain from other alternatives occurs when one alternative is chosen"$^1$ (In short, it's a trade-off). Bias and Variance also have this type of "trade-off" relationship, in a supervised machine learning model. 
 
