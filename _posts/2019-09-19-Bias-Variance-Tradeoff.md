@@ -19,7 +19,6 @@ An archer tries to shoot 100 arrows to his target. Possible outcomes can be cate
 <img align="center" src="https://pbs.twimg.com/media/CpWDWuSW8AQUuCk.jpg" width="400">
 
 <p style="font-size:7pt; text-align:center;"> source: https://pbs.twimg.com/media/CpWDWuSW8AQUuCk.jpg </p>
-
 &nbsp;
 
 Low bias refers to a situation where an archer's shots are relatively close to the center of the target. Low variance refers to a situation where the archer's shots were well-clustered and consistent. A good archer would make his shots look like low bias and low variance; well-clustered shot at the center. This is exactly what our machine learning model should be trained to do. 
@@ -75,7 +74,6 @@ Generally, when your machine learning model is underfitted it will be simple. On
 <img src="https://miro.medium.com/max/2250/1*_7OPgojau8hkiPUiHoGK_w.png" width="700">
 
 <p style="font-size:7pt; text-align:center;">source: https://medium.com/greyatom/what-is-underfitting-and-overfitting-in-machine-learning-and-how-to-deal-with-it-6803a989c76</p>
-
 Unlike the college life trade-off meme, you have a choice to balance the two metrics. If bias and variance are well adjusted (in other words well compromised) the model would learn from the training data and be flexible enough to adapt to real data. 
 
 There aren't any golden rules for deciding this, because there are many variables that affect this balance: characteristic of dataset, implemented algorithm, context of model application.
