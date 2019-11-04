@@ -11,10 +11,10 @@ plugins:
 
 # Page
 pages_list: 
+  Projects: '/my-projects'
   About Me: '/about'
   Blog: '/blog'
   Contact: '/contact'
-  Projects: '/my-projects'
   Tags: '/tags'
 
 
