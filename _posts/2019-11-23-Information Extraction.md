@@ -13,7 +13,7 @@ What comes to your mind when you think about data? Numbers? Fancy graphs? Nicely
 
 <br>
 
-### Unstructured Data
+## Unstructured Data
 
 We see unstructured data everyday. Our emails, text messages, comments, audio files, video, etc. Although there are useful information in those data, it is difficult to process or gain insights from them. This is because they are ambiguous and have different contexts. Unlike structured data which has **metadata** like pre-defined fields (columns), unstructured data doesn't have a fixed format or "description data of the data". This makes the data searchable for machines and put them into algorithms or models. 
 
@@ -36,39 +36,40 @@ This is the field in Natural Language Process, **Information extraction**.
 
 <br>
 
-### Information Extraction
+## Information Extraction
 
 **Information Extraction** (**IE**) refers to the process of automatically retrieving structured information from unstructured data. It can be regarded as a pre-requisite step for analyzing unstructured data. This term is distinct from **Information Retrieval** (**IR**), which is more relevant to the "querying" or "searching" documents based on some set of keywords. 
 
 <br>
 
-#### General Architecture, Process, Subtasks of Information Extraction
+### General Architecture, Process, Subtasks of Information Extraction
 
 Information Extraction includes following subtasks according to its nature of problem:
+&nbsp;
 
 - **Named Entity Recognition (NER)** 
 
   >Recognizing known entity names such as people, places, numerical expression. The task focuses on identifying the entity and extracting it. For example, "Jake lives in Canada" can be processed into  extracting "Jake" as a person and "Canada" as a location.
 
-  
+&nbsp;&nbsp;
 
-- **Named Entity Linking (NEL) / Named Entity Disambiguation (NED) ** 
+- **Named Entity Linking (NEL);Named Entity Disambiguation (NED)**
 
   >Named Entity Linking is getting entities from NER and matching it to the knowledge that you already have in the database. It is a task of finding what the entity actually means in terms of the context. For example, from the sentence "Tom is one of the best actors in history. He showed excellent performance  on Mission Impossible series", NER system will recognize Tom as a person. However, it doesn't know whether this is Tom Cruise or Tom Hanks. Named Entity Linking will retrieve knowledge from the existing database to find answer to this problem using the context.
 
-  
+  &nbsp;
 
 - **Temporal Information Extraction (Event Extraction)**
 
   >The purpose of Temporal Information Extraction is to identify events. Detecting certain frequency, dates, recognizing who is involved and what is happening. For example from the sentence, "Yesterday Jake hurt his leg so he won't play soccer tomorrow ", Yesterday and tomorrow is the temporal information and we can structure our data by putting these information into date and matching description according to the date: Yesterday : hurt his leg , tomorrow : won't play soccer.
 
-
+&nbsp;
 
 - **Relation Extraction (RE)**
 
   >This task is pretty much self-explanatory; it is about figuring out relationship between entities. For example, from the sentence, "Jake studies in UBC"  information such as PERSON studies in LOCATION can be extracted.
 
-  
+&nbsp;
 
 - **Coreference Resolution (CR)**
 
@@ -86,7 +87,7 @@ Information Extraction includes following subtasks according to its nature of pr
 
 <br>
 
-#### Methodologies/Approaches
+### Methodologies/Approaches
 
 Also, there are several types of approaches and methodologies to Information Extraction<sup>2</sup>:
 
@@ -99,7 +100,7 @@ Also, there are several types of approaches and methodologies to Information Ext
 
 
 
-
+___
 
 
 
