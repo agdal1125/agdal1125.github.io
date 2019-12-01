@@ -9,6 +9,8 @@ tags:
 mathjax: true
 ---
 
+
+
 What comes to your mind when you think about data? Numbers? Fancy graphs? Nicely organized Excel tables and spreadsheets? The first thing that appears in my head is a messy table with lots of missing values and unstructured texts. The big data that media and people are talking about mostly refers to **unstructured  data**; Approximately, 75-85% of data is unstructured, primarily text.<sup>1</sup> Although the figures may have variations, the takeaway here is that most of what we call "the big data" is a raw material; we have to mine and extract it to make it useful.
 
 <br>
