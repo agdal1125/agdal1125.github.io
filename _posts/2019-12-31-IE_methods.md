@@ -6,7 +6,6 @@ tags:
 - Information Extraction
 - Conditional Random Fields
 - CRF
-
 mathjax: true
 ---
 
@@ -94,9 +93,9 @@ There numerous machine learning classifiers available: Support Vector Machines, 
 
 ## Sequential Labeling based Method
 
+Simlar to the Classification based method, we can view IE task as a sequantial labeling. Text data can be seen as a sequence of labeled tokens. Unlike other two methods, sequential labeling method allows the model to include context of dependencies between the words of interest. The sequential labeling method differs on how the conditional probability is computed since the objective is to find a label sequence $y$ that maximizes the conditional probability, $p(x|y)$. 
 
-
-Just like classification based method, we can view IE task as a sequantial labeling. Text data can be seen as a sequence of labeled tokens. Unlike other two methods, sequential labeling method allows the model to include context of dependencies between the words of interest. The sequential labeling method differs on how the conditional probability is computed since the objective is to find a label sequence $y$ that maximizes the conditional probability $p(x|y)$. Among the various methods, Conditional Random Fields are an important method in information extraction.
+Among the various methods, Conditional Random Fields are an important and widely incorporated model in the field of IE.
 
 <br>
 
