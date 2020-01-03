@@ -93,7 +93,7 @@ There numerous machine learning classifiers available: Support Vector Machines, 
 
 ## Sequential Labeling based Method
 
-Simlar to the Classification based method, we can view IE task as a sequantial labeling. Text data can be seen as a sequence of labeled tokens. Unlike other two methods, sequential labeling method allows the model to include context of dependencies between the words of interest. The sequential labeling method differs on how the conditional probability is computed since the objective is to find a label sequence $y$ that maximizes the conditional probability, $p(x|y)$. 
+Simlar to the Classification based method, we can view IE task as a sequantial labeling. Text data can be seen as a sequence of labeled tokens. Unlike other two methods, sequential labeling method allows the model to include context of dependencies between the words of interest. The sequential labeling method differs on how the conditional probability is computed since the objective is to find a label sequence $y$ that maximizes the conditional probability, $p(x \vert y)$. 
 
 Among the various methods, Conditional Random Fields are an important and widely incorporated model in the field of IE.
 
@@ -105,9 +105,9 @@ CRF is a type of discriminative undirected probabilistic graphical model. The im
 
 The definition follows:
 
->  Let $G = (V,E)$ be a graph such that $\bold{Y} = (Y_v)_{v \in V}$ so that $\bold{Y}$ is indexed by the vertices of $G$. Then $(\bold{X},\bold{Y})$ is a conditional random field when the random variables $Y_v$,  conditioned on $\bold{X}$ obey the Markov property with respect to the graph:
+>  Let $G = (V,E)$ be a graph such that $\mathbf{Y} = (Y_v)_{v \in V}$ so that $\mathbf{Y}$ is indexed by the vertices of $G$. Then $(\mathbf{X},\mathbf{Y})$ is a conditional random field when the random variables $Y_v$,  conditioned on $\mathbf{X}$ obey the Markov property with respect to the graph:
 >
-> $p(\bold{Y}_v|\bold{X},\bold{Y}_w, w\neq v) = p(\bold{Y}_v|\bold{X},\bold{Y}_w, w \sim v)$  where $w \sim v$ means that $w$ and $v$ are neighbors in $G$ <sup>3</sup>
+> $p(\mathbf{Y}_v \vert \mathbf{X},\mathbf{Y}_w, w\neq v) = p(\mathbf{Y}_v \vert \mathbf{X},\mathbf{Y}_w, w \sim v)$  where $w \sim v$ means that $w$ and $v$ are neighbors in $G$ <sup>3</sup>
 
 
 
