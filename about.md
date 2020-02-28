@@ -1,19 +1,19 @@
 ---
 layout: page
-title: Welcome to my page! I am Jaekeun (Jake) Lee
+title: Welcome to my page! I am Jake
 ---
 
 <img src="./assets/images/me.png">
 
 <br>
 
-### A Bit about Myself
+## A Bit about Myself
 
 (You can download my [CV/Resume]({{ "/assets/Jaekeun Lee_CV.pdf" | absolute_url }}))
 
 <br>
 
-#### How I met Data Science
+### How I met Data Science
 
 The very first "plausible" dream that I had as a child was a diplomat.
 
@@ -33,7 +33,7 @@ The series of experience in business industry opened my eyes toward NLP and Imag
 
 <br>
 
-#### Interests
+### Interests
 
 My interest lies in the following field of discipline in Data Science/Machine Learning:
 
@@ -48,7 +48,9 @@ My interest lies in the following field of discipline in Data Science/Machine Le
 
 <br>
 
-#### Infographics: Introduction to Jaekeun Lee
+### Infographics: Introduction to Jaekeun Lee
+
+
 
 
 
