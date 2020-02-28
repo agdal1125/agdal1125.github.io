@@ -1,9 +1,10 @@
 ---
- layout: post
+layout: post
 title: The Curse of High Dimension
 tags:
 - Dimension
 - Analysis
+
 mathjax: true
 ---
 
@@ -76,7 +77,7 @@ The curse that sparsity afflicts can be categorized into two perspectives: Space
 
 #### Space Complexity
 
-If matrix is sparse, many of its elements are zero. This suggests that even though there are a little number of non-zero entries in the matrix, all the zeros should be stored into the computer memory as well. In short,   memory would be definitely wasted by storing unmeaningful values, causing massive inefficiency in terms of storage. The larger the matrix and dimension gets, the more memory would be wasted in an exponential way.
+If matrix is sparse, many of its elements are zero. This suggests that even though there are a little number of non-zero entries in the matrix, all the zeros should be stored into the computer memory as well. In short,   memory would be definitely wasted by storing unmeaningful values, causing massive inefficiency in terms of storage. The larger the matrix and dimension gets, the more memory would be wasted in an exponential way. 
 
 &nbsp;
 
@@ -88,11 +89,15 @@ What if our machine learning model tries to perform operations on the sparse mat
 
 <br>
 
+### Risk of Overfitting
 
+High dimensionality also leads to the risk of overfitting the model. The more features we incorporate to the model, the more likely it is for the model to perform perfectly on the training data. This will make the model  highly biased by even making it learn the noises in the data.
+
+<br>
 
 Citations:
 
-$^1$https://www.lexico.com/en/definition/dimension 
+<sup>1</sup>https://www.lexico.com/en/definition/dimension 
 
 <sup>2</sup>https://web.archive.org/web/20140111191053/http://curious.astro.cornell.edu/question.php?number=4
 
