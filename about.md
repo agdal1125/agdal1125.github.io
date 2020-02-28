@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Welcome to my page! I am Jake
+title: About Me
 ---
+
+# Welcome to My Page! I am Jake
 
 <img src="/assets/images/me.png">
 
@@ -43,14 +45,6 @@ My interest lies in the following field of discipline in Data Science/Machine Le
 >
 > - Bayesian Inference & Statistical Prediction
 >
-
-&nbsp;&nbsp;
-
-### 
-
-
-
-
 
 
 
