@@ -56,7 +56,7 @@ $$f(y - \textbf{w}^T\textbf{x}) + \lambda\times norm$$
 
 $L_0$ norm​ ($\vline\vline\textbf{w}\vline\vline_0$) is the number of non-zero elements in a vector:
 
-$L_0 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda\vline\vline\textbf{w}\vline\vline_0$
+$L_0 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda \vline \vline \textbf{w} \vline \vline_0$
 
 <br>
 
