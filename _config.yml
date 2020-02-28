@@ -2,8 +2,8 @@
 title:               Jaekeun Lee's Blog
 tagline:             'a.k.a nowgeun'
 description:         'A blog of Jaekeun Lee for recording life and keeping track of studies, interests and experiences'
-url:                
-baseurl:             '/about'
+url:                 '/about'
+baseurl:             ''
 paginate:            5
 future: true
 plugins:
