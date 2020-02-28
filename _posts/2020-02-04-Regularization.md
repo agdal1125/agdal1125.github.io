@@ -40,35 +40,35 @@ The name of $L_0, L_1, L_2$ regularization is derived from the types **norm** ap
 
 In general, we define model as :
 
- $$\hat{y} = \bold{w}^T\bold{x}$$, 
+$$\hat{y} = \textbf{w}^T\textbf{x}$$, 
 
-- $\bold{w} = (w_1,w_2,w_3,...w_n)$ : weight vector 
-- $\bold{x} = (x_1,x_2,x_3,...x_n)$ : vector of selected features or variables.
+- $\textbf{w} = (w_1,w_2,w_3,...w_n)$ : weight vector 
+- $\textbf{x} = (x_1,x_2,x_3,...x_n)$ : vector of selected features or variables.
 -  $f$: loss function
 
-The loss would be $f(y - \hat{y}) = f(y-\bold{w}^T\bold{x})$ and minimizing this  would be the objective of machine learning. The regularization modifies this loss by adding the norm: 
+The loss would be $f(y - \hat{y}) = f(y-\textbf{w}^T\textbf{x})$ and minimizing this  would be the objective of machine learning. The regularization modifies this loss by adding the norm: 
 
-$$f(y - \bold{w}^T\bold{x}) + \lambda\times norm$$ 
+$$f(y - \textbf{w}^T\textbf{x}) + \lambda\times norm$$ 
 
  ($\lambda$ is the degree of penalization or strength of regularization. This is also a hyperparameter.)
 
 <br>
 
-$L_0$ norm​ ($||\bold{w}||_0$) is the number of non-zero elements in a vector:
+$L_0$ norm​ ($\vline\vline\textbf{w}\vline\vline_0$) is the number of non-zero elements in a vector:
 
-$L_0 \ regularization = f(y - \bold{w}^T\bold{x}) + \lambda||\bold{w}||_0$
-
-<br>
-
-$L_1$ norm ($||\bold{w}||_1$) is the sum of absolute values in a vector:
-
-$L_1 \ regularization = f(y - \bold{w}^T\bold{x}) + \lambda||\bold{w}||_1$
+$L_0 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda\vline\vline\textbf{w}\vline\vline_0$
 
 <br>
 
-$L_2$ norm ($||\bold{w}||_2$) is the squared root of the sum of squared values in a vector. $L_2$ regularization uses squared value of $L_2$ norm:
+$L_1$ norm ($\vline\vline\textbf{w}\vline\vline_1$) is the sum of absolute values in a vector:
 
-$L_2 \ regularization = f(y - \bold{w}^T\bold{x}) + \lambda||\bold{w}||^2_2$
+$L_1 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda\vline\vline\textbf{w}\vline\vline_1$
+
+<br>
+
+$L_2$ norm ($\vline\vline\textbf{w}\vline\vline_2$) is the squared root of the sum of squared values in a vector. $L_2$ regularization uses squared value of $L_2$ norm:
+
+$L_2 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda\vline\vline\textbf{w}\vline\vline^2_2$
 
 <br>
 
@@ -87,7 +87,7 @@ $L_2 \ regularization = f(y - \bold{w}^T\bold{x}) + \lambda||\bold{w}||^2_2$
 
 Elastic net is a regularization method with $L_1$ and $L_2$ combined:
 
-$f(y - \bold{w}^T\bold{x}) + \lambda(\alpha||\bold{w}||_0+ (1-\alpha)||\bold{w}||^2_2)$
+$f(y - \textbf{w}^T\textbf{x}) + \lambda(\alpha\vline\vline\textbf{w}\vline\vline_0+ (1-\alpha)\vline\vline\textbf{w}\vline\vline^2_2)$
 
 - $\lambda$ control the strength of regularization
 

@@ -3,7 +3,7 @@ layout: page
 title: Welcome to my page! I am Jake
 ---
 
-<img src="./assets/images/me.png">
+<img src="../assets/images/me.png">
 
 <br>
 
