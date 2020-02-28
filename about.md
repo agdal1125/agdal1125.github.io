@@ -46,9 +46,7 @@ My interest lies in the following field of discipline in Data Science/Machine Le
 
 &nbsp;&nbsp;
 
-<br>
-
-### Infographics: Introduction to Jaekeun Lee
+### 
 
 
 

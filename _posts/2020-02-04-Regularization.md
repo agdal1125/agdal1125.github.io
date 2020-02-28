@@ -54,21 +54,21 @@ $$f(y - \textbf{w}^T\textbf{x}) + \lambda\times norm$$
 
 <br>
 
-$L_0$ norm​ ($\vline\vline\textbf{w}\vline\vline_0$) is the number of non-zero elements in a vector:
+$L_0$ norm​ ($\vert\vert\textbf{w}\vert\vert_0$) is the number of non-zero elements in a vector:
 
-$L_0 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda \vline \vline \textbf{w} \vline \vline_0$
-
-<br>
-
-$L_1$ norm ($\vline\vline\textbf{w}\vline\vline_1$) is the sum of absolute values in a vector:
-
-$L_1 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda\vline\vline\textbf{w}\vline\vline_1$
+$L_0 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda \vert\vert \textbf{w}\vert\vert_0$
 
 <br>
 
-$L_2$ norm ($\vline\vline\textbf{w}\vline\vline_2$) is the squared root of the sum of squared values in a vector. $L_2$ regularization uses squared value of $L_2$ norm:
+$L_1$ norm ($\vert\vert\textbf{w}\vert\vert_1$) is the sum of absolute values in a vector:
 
-$L_2 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda\vline\vline\textbf{w}\vline\vline^2_2$
+$L_1 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda\vert\vert\textbf{w}\vert\vert_1$
+
+<br>
+
+$L_2$ norm ($\vert\vert\textbf{w}\vert\vert_2$) is the squared root of the sum of squared values in a vector. $L_2$ regularization uses squared value of $L_2$ norm:
+
+$L_2 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda\vert\vert\textbf{w}\vert\vert^2_2$
 
 <br>
 
@@ -87,7 +87,7 @@ $L_2 \ regularization = f(y - \textbf{w}^T\textbf{x}) + \lambda\vline\vline\text
 
 Elastic net is a regularization method with $L_1$ and $L_2$ combined:
 
-$f(y - \textbf{w}^T\textbf{x}) + \lambda(\alpha\vline\vline\textbf{w}\vline\vline_0+ (1-\alpha)\vline\vline\textbf{w}\vline\vline^2_2)$
+$f(y - \textbf{w}^T\textbf{x}) + \lambda(\alpha\vert\vert\textbf{w}\vert\vert_0+ (1-\alpha)\vert\vert\textbf{w}\vert\vert^2_2)$
 
 - $\lambda$ control the strength of regularization
 
