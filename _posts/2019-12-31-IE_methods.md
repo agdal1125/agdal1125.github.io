@@ -82,7 +82,6 @@ IE can be viewed as a classification problem; setting a boundary with two classi
   <img src="/assets/images/IE_class_ex.png" width="700" height="300">
   <figcaption style="font-size: 8pt; text-align: center;">source: Tang et al., 2007 <sup>1</sup></figcaption>
 </figure>
-
 <br>
 
 The words in the sentences are parsed as tokens and each words are classified by the starting classifier and ending classifier. Then, the result can be combined and entities of interest can be extracted. 
