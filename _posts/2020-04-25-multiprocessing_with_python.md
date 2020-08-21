@@ -115,9 +115,13 @@ s_results == p_results
 
 <br>
 
-However, parallel processing is not always faster than serial processing. The performance depends on the number of iterations. [Parallel programming is efficient when each iteration is sufficiently expensive compared to processor time](https://stackoverflow.com/questions/10418493/why-was-the-parallel-version-slower-than-the-sequential-version-in-this-example). Let's visualize this:
+However, parallel processing is not always faster than serial processing. The performance depends on the number of iterations. [Parallel programming is efficient when each iteration is sufficiently expensive compared to processor time](https://stackoverflow.com/questions/10418493/why-was-the-parallel-version-slower-than-the-sequential-version-in-this-example)
 
-#### Comparing sequential and parallel running time of `factorial()`  (Optional)
+<br>
+
+### Comparing sequential and parallel running time of `factorial()`  (Optional)
+
+Let's prove whether parallel programming is not always faster than sequential programming:
 
 **Create running time data for comparison** (This takes a while; took me about 20 minutes to run)
 
