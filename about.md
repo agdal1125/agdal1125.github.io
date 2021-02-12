@@ -5,7 +5,7 @@ title: About Me
 
 # Welcome to My Page! I am Jake
 
-<img src="./assets/images/me.png">
+<img src="../assets/images/me.png">
 
 <br>
 
