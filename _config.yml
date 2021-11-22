@@ -1,7 +1,7 @@
 # Setup
-title:               Jaekeun Lee's Blog
+title:               Jaekeun Lee's Space
 tagline:             'a.k.a nowgeun'
-description:         'A blog of Jaekeun Lee for recording life and keeping track of studies, interests and experiences'
+description:         'A website of Jaekeun Lee for recording life and keeping track of studies, interests and experiences'
 url:                 
 baseurl:             ''
 paginate:            5
@@ -14,6 +14,7 @@ pages_list:
   Projects: '/my-projects'
   About Me: '/about'
   Blog: '/blog'
+  Writings: '/reviews'
   Contact: '/contact'
   Tags: '/tags'
 
