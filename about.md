@@ -48,3 +48,13 @@ My interest lies in the following field of discipline in Data Science/Machine Le
 
 
 
+Here are some ways that you can get in touch with me:
+
+- E-mail: agdal1125@gmail.com
+
+- [GitHub](https://github.com/agdal1125)
+
+- [Facebook](https://www.facebook.com/thisjaekeun)
+
+- [Instagram](https://www.instagram.com/nowgeun)
+
